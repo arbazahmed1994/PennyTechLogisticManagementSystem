@@ -18,7 +18,6 @@ namespace PennyTechManagementSystem.Controllers
             return View();
         }
 
-        [HttpGet]
         public ActionResult TopNav()
         {
             //var identity = (ClaimsPrincipal)Thread.CurrentPrincipal;

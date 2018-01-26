@@ -11,7 +11,7 @@ namespace PennyTechManagementSystem.Controllers
     {
         //
         // GET: /Home/
-
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
