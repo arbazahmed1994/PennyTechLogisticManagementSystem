@@ -59,5 +59,113 @@ namespace PennyTechManagementSystem {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Builty Number.
+        /// </summary>
+        public static string BuiltyNumber {
+            get {
+                return ResourceManager.GetString("BuiltyNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Destination Location.
+        /// </summary>
+        public static string DestinationLocation {
+            get {
+                return ResourceManager.GetString("DestinationLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Estimated Time.
+        /// </summary>
+        public static string EstimatedTime {
+            get {
+                return ResourceManager.GetString("EstimatedTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loaded Weight.
+        /// </summary>
+        public static string LoadedWeight {
+            get {
+                return ResourceManager.GetString("LoadedWeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Company Name.
+        /// </summary>
+        public static string OrderCompanyName {
+            get {
+                return ResourceManager.GetString("OrderCompanyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Person Contact.
+        /// </summary>
+        public static string OrderPersonContact {
+            get {
+                return ResourceManager.GetString("OrderPersonContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Order Person Name.
+        /// </summary>
+        public static string OrderPersonName {
+            get {
+                return ResourceManager.GetString("OrderPersonName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reference Date.
+        /// </summary>
+        public static string ReferenceDate {
+            get {
+                return ResourceManager.GetString("ReferenceDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shipment Name.
+        /// </summary>
+        public static string ShipmentName {
+            get {
+                return ResourceManager.GetString("ShipmentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source Location.
+        /// </summary>
+        public static string SourceLocation {
+            get {
+                return ResourceManager.GetString("SourceLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting Meter Reading.
+        /// </summary>
+        public static string StartingMeterReading {
+            get {
+                return ResourceManager.GetString("StartingMeterReading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vendor Name.
+        /// </summary>
+        public static string VendorName {
+            get {
+                return ResourceManager.GetString("VendorName", resourceCulture);
+            }
+        }
     }
 }
