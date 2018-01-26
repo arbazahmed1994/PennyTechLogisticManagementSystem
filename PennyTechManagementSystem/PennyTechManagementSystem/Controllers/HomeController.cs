@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PennyTechManagementSystem.Constant;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,6 +16,26 @@ namespace PennyTechManagementSystem.Controllers
         {
             return View();
         }
+        public ActionResult Logistic(int id)
+        {
+            NavbarConstantID.NavID = id;
+            return View("LogisticDashboard");
+        }
 
+        public ActionResult LogisticDashboard()
+        {
+            return View();
+        }
+
+        public ActionResult Employee(int id)
+        {
+            NavbarConstantID.NavID = id;
+            return View("EmployeeDashboard");
+        }
+
+        public ActionResult EmployeeDashboard()
+        {
+            return View();
+        }
     }
 }

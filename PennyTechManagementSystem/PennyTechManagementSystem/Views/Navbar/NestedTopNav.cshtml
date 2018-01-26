@@ -1,0 +1,46 @@
+﻿@model PennyTechManagementSystem.Models.NavbarItem
+
+<div class="sidebar">
+    <nav class="sidebar-nav">
+        <ul class="nav">
+                <li class="nav-title">
+                    Theme
+                </li>
+                @foreach (var item in Model)
+                {
+                    if (item.ParentID == 0)
+                    {
+                        if (item.IsParent == 0)
+                        {
+                        <li class="nav-item">
+                            <a href="@Url.Action(item.ActionName, item.ControllerName, new { id = item.MenuID })" class="nav-link">
+                                <i class="@item.Icon"></i> @item.LinkText
+                            </a>
+                        </li>
+        
+                  }
+                    else
+                    {
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="@item.Icon"></i>  @item.LinkText</a>
+                        <ul class="nav-dropdown-items">
+                            @foreach (var itm in Model)
+                            {
+                                if (itm.ParentID == item.MenuID)
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="@Url.Action(itm.ActionName, itm.ControllerName)" target="_top">
+                                            <i class="@item.Icon"></i> 
+                                             @item.LinkText
+                                        </a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                    </li>
+                    }
+                }
+            }
+        </ul>
+    </nav>
+</div>

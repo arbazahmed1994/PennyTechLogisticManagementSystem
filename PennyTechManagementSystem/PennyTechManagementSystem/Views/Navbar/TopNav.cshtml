@@ -1,0 +1,16 @@
+﻿@model PennyTechManagementSystem.Models.NavbarItem
+
+<div class="sidebar">
+    <nav class="sidebar-nav">
+    <ul class="nav">
+        <li class="nav-title">
+        Theme
+        </li>
+        <li class="nav-item">
+            <a href="@Url.Action(item.ActionName, item.ControllerName, new { id = item.MenuID })" class="nav-link">
+                <i class="@item.Icon"></i> @item.LinkText
+            </a>
+        </li>
+    </ul>
+    </nav>
+</div>
