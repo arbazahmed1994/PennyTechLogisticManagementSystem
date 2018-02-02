@@ -120,6 +120,7 @@
     <Compile Include="Constant\ProcedureNameHandling.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
+    <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -140,6 +141,7 @@
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\NavbarRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\VehicleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -385,6 +387,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Navbar\TopNav.cshtml" />
     <Content Include="Views\Navbar\NestedTopNav.cshtml" />
+    <Content Include="Views\Vehicle\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
