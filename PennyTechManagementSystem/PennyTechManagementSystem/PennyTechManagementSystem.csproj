@@ -118,19 +118,45 @@
     <Compile Include="Common\Extensions.cs" />
     <Compile Include="Constant\NavbarConstantID.cs" />
     <Compile Include="Constant\ProcedureNameHandling.cs" />
+    <Compile Include="Controllers\DesignationsController.cs" />
+    <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
+    <Compile Include="Controllers\VehicleBusinessTypeController.cs" />
+    <Compile Include="Controllers\VehicleCompanyController.cs" />
     <Compile Include="Controllers\VehicleController.cs" />
+    <Compile Include="Controllers\VehicleTypeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\BasicModel.cs" />
+    <Compile Include="Models\BranchOffice.cs" />
+    <Compile Include="Models\Cities.cs" />
+    <Compile Include="Models\Colors.cs" />
+    <Compile Include="Models\CompanyBusinessType.cs" />
+    <Compile Include="Models\CompanyProfile.cs" />
+    <Compile Include="Models\Countries.cs" />
+    <Compile Include="Models\Departments.cs" />
+    <Compile Include="Models\Designations.cs" />
+    <Compile Include="Models\Driver.cs" />
+    <Compile Include="Models\Education.cs" />
+    <Compile Include="Models\EmployeeUser.cs" />
+    <Compile Include="Models\Fleet.cs" />
+    <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\MaritalStatu.cs" />
     <Compile Include="Models\ModelExtentions.cs" />
+    <Compile Include="Models\Navbar.cs" />
     <Compile Include="Models\NavbarModel.cs" />
+    <Compile Include="Models\Religion.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\ThirdPartyVehicle.cs" />
     <Compile Include="Models\TripBeginModel.cs" />
+    <Compile Include="Models\VehicleBusinessType.cs" />
+    <Compile Include="Models\VehicleCompany.cs" />
     <Compile Include="Models\VehicleModel.cs" />
+    <Compile Include="Models\VehicleType.cs" />
     <Compile Include="NameHandling.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,10 +164,15 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BasicRepository.cs" />
+    <Compile Include="Repository\DesignationsRepository.cs" />
+    <Compile Include="Repository\DriverRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\NavbarRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\VehicleBusinessTypeRepository.cs" />
+    <Compile Include="Repository\VehicleCompanyRepository.cs" />
     <Compile Include="Repository\VehicleRepository.cs" />
+    <Compile Include="Repository\VehicleTypeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -172,6 +203,7 @@
     <Content Include="Content\Scripts\Pace.js" />
     <Content Include="Content\Scripts\Popper.min.js" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\FontAwesome.min.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -252,6 +284,7 @@
     <Content Include="img\overlays\09.png" />
     <Content Include="img\svg\arrow_left.svg" />
     <Content Include="img\svg\arrow_right.svg" />
+    <Content Include="img\thumbnail.png" />
     <Content Include="sass\README.txt" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap-datepicker.js" />
@@ -388,6 +421,24 @@
     <Content Include="Views\Navbar\TopNav.cshtml" />
     <Content Include="Views\Navbar\NestedTopNav.cshtml" />
     <Content Include="Views\Vehicle\Index.cshtml" />
+    <Content Include="Views\VehicleType\Index.cshtml" />
+    <Content Include="Views\VehicleType\Create.cshtml" />
+    <Content Include="Views\Shared\_NestedForm.cshtml" />
+    <Content Include="Views\Shared\_NestedIndex.cshtml" />
+    <Content Include="Views\VehicleType\Edit.cshtml" />
+    <Content Include="Views\VehicleBusinessType\Index.cshtml" />
+    <Content Include="Views\VehicleBusinessType\Create.cshtml" />
+    <Content Include="Views\VehicleBusinessType\Edit.cshtml" />
+    <Content Include="Views\VehicleCompany\Index.cshtml" />
+    <Content Include="Views\VehicleCompany\Create.cshtml" />
+    <Content Include="Views\VehicleCompany\Edit.cshtml" />
+    <Content Include="Views\Home\EmployeeSupplementsDashboard.cshtml" />
+    <Content Include="Views\Designations\Index.cshtml" />
+    <Content Include="Views\Designations\Create.cshtml" />
+    <Content Include="Views\Designations\Edit.cshtml" />
+    <Content Include="Views\Driver\Index.cshtml" />
+    <Content Include="Views\Driver\Create.cshtml" />
+    <Content Include="Views\Home\VehicleSupplementsDashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

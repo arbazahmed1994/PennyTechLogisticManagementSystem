@@ -1,0 +1,51 @@
+﻿@model PennyTechManagementSystem.Models.VehicleType
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-sm-12">
+
+                            <div class="form-group">
+
+                                @Html.HiddenFor(model => model.VehicleTypeID)
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.VehicleTypeName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.VehicleTypeName)
+                                    @Html.ValidationMessageFor(model => model.VehicleTypeName)
+                                </div>
+                            </div>
+                            <p>
+                                <input type="submit" class="btn btn-sm btn-primary" value="Update" />
+                            </p>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+            
+    </div>
+   
+}
+
+

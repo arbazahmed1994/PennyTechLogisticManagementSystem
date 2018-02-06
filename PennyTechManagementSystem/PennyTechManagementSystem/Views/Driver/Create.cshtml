@@ -1,0 +1,95 @@
+﻿@model PennyTechManagementSystem.Models.Driver
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Salary)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Salary)
+                                    @Html.ValidationMessageFor(model => model.Salary)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DailyPityCash)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DailyPityCash)
+                                    @Html.ValidationMessageFor(model => model.DailyPityCash)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DriverName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DriverName)
+                                    @Html.ValidationMessageFor(model => model.DriverName)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DriverMobile)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DriverMobile)
+                                    @Html.ValidationMessageFor(model => model.DriverMobile)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DriverCNIC)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DriverCNIC)
+                                    @Html.ValidationMessageFor(model => model.DriverCNIC)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DrivingLicenceNumber)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DrivingLicenceNumber)
+                                    @Html.ValidationMessageFor(model => model.DrivingLicenceNumber)
+                                </div>
+                            </div>
+
+                            <p>
+                                <input type="submit" value="Create" />
+                            </p>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+}

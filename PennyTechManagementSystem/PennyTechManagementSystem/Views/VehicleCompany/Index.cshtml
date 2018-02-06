@@ -1,0 +1,36 @@
+﻿@model IEnumerable<PennyTechManagementSystem.Models.VehicleCompany>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table-custom table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleCompanyName)
+            </th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleCompanyName)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "VehicleCompany", new { id=item.VehicleCompanyID })"><i class="fa fa-pencil"></i></a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Delete", "VehicleCompany", new { id=item.VehicleCompanyID })" onclick="return confirm('Do you really want to delete this item?')"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

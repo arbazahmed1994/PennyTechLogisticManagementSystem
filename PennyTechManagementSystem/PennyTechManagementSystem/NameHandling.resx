@@ -120,8 +120,29 @@
   <data name="BuiltyNumber" xml:space="preserve">
     <value>Builty Number</value>
   </data>
+  <data name="DailyPityCash" xml:space="preserve">
+    <value>Daily Pity Cash</value>
+  </data>
+  <data name="DesignationName" xml:space="preserve">
+    <value>Designation Name</value>
+  </data>
   <data name="DestinationLocation" xml:space="preserve">
     <value>Destination Location</value>
+  </data>
+  <data name="DriverCNIC" xml:space="preserve">
+    <value>Driver CNIC</value>
+  </data>
+  <data name="DriverMobile" xml:space="preserve">
+    <value>Driver Mobile</value>
+  </data>
+  <data name="DriverName" xml:space="preserve">
+    <value>Driver Name</value>
+  </data>
+  <data name="DrivingLicenceNumber" xml:space="preserve">
+    <value>Driving Licence Number</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Your reques can not be completed</value>
   </data>
   <data name="EstimatedTime" xml:space="preserve">
     <value>Estimated Time</value>
@@ -141,6 +162,9 @@
   <data name="ReferenceDate" xml:space="preserve">
     <value>Reference Date</value>
   </data>
+  <data name="Salary" xml:space="preserve">
+    <value>Salary</value>
+  </data>
   <data name="ShipmentName" xml:space="preserve">
     <value>Shipment Name</value>
   </data>
@@ -149,6 +173,18 @@
   </data>
   <data name="StartingMeterReading" xml:space="preserve">
     <value>Starting Meter Reading</value>
+  </data>
+  <data name="SuccessMessageDelete" xml:space="preserve">
+    <value>Your request for deleting is completed successfully</value>
+  </data>
+  <data name="VehicleBusinessTypeName" xml:space="preserve">
+    <value>Vehicle Business Type Name</value>
+  </data>
+  <data name="VehicleCompanyName" xml:space="preserve">
+    <value>Vehicle Company Name</value>
+  </data>
+  <data name="VehicleTypeName" xml:space="preserve">
+    <value>Vehicle Type Name</value>
   </data>
   <data name="VendorName" xml:space="preserve">
     <value>Vendor Name</value>

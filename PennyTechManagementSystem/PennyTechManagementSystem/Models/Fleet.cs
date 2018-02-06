@@ -1,7 +1,10 @@
-
 using System;
 using System.Collections.Generic;
-namespace WindowsFormsApplication2
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace PennyTechManagementSystem.Models
 {
     public class Fleet
     {    

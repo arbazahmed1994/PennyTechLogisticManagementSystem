@@ -24,6 +24,9 @@ namespace PennyTechManagementSystem.Controllers
 
         public ActionResult LogisticDashboard()
         {
+            ViewBag.Head = "Fleet Management";
+            ViewBag.Form = "";
+
             return View();
         }
 
@@ -35,6 +38,37 @@ namespace PennyTechManagementSystem.Controllers
 
         public ActionResult EmployeeDashboard()
         {
+            ViewBag.Head = "Employees Management";
+            ViewBag.Form = "";
+
+            return View();
+        }
+
+        public ActionResult VehicleSupplements()
+        {
+            NavbarConstantID.NavID = 100;
+            return View("VehicleSupplementsDashboard");
+        }
+
+        public ActionResult VehicleSupplementsDashboard()
+        {
+            ViewBag.Head = "Vehicle Supplements Dashboard";
+            ViewBag.Form = "";
+
+            return View();
+        }
+
+        public ActionResult EmployeeSupplements()
+        {
+            NavbarConstantID.NavID = 101;
+            return View("EmployeeSupplementsDashboard");
+        }
+
+        public ActionResult EmployeeSupplementsDashboard()
+        {
+            ViewBag.Head = "Employee Supplements Dashboard";
+            ViewBag.Form = "";
+
             return View();
         }
     }

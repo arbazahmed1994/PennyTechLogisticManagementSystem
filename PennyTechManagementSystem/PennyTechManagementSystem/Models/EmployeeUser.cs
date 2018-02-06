@@ -1,7 +1,11 @@
-
+using PennyTechManagementSystem;
 using System;
 using System.Collections.Generic;
-namespace WindowsFormsApplication2
+using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
+
+namespace PennyTechManagementSystem.Models
 {
     public class EmployeeUser
     {

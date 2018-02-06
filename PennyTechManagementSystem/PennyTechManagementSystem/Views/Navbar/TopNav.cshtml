@@ -4,7 +4,7 @@
     <nav class="sidebar-nav">
         <ul class="nav">
             <li class="nav-title">
-                Theme
+                Categories
             </li>
             @foreach (var item in Model)
             {
@@ -15,11 +15,16 @@
             </li>
             }
             <li class="nav-title">
-                Management
+                Management 
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="fa fa-gear"></i> Manage Items
+                <a href="@Url.Action("VehicleSupplements", "Home")" class="nav-link">
+                    <i class="fa fa-gear"></i> Vehicle Supplements
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="@Url.Action("EmployeeSupplements", "Home")" class="nav-link">
+                    <i class="fa fa-gear"></i> Employee Supplements
                 </a>
             </li>
             

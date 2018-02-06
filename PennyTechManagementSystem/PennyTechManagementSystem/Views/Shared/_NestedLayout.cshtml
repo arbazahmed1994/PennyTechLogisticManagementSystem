@@ -6,11 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    @*@Styles.Render("~/Content/css")*@
     <title>PennyTech Management System</title>
-    @*@Scripts.Render("~/bundles/jquery")*@
-    @*@Scripts.Render("~/bundles/jquery")*@
-    @*@Scripts.Render("~/bundles/modernizr")*@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href="~/stylesheet/bootstrap.min.css" rel="stylesheet" />
     <link href="~/stylesheet/font-awesome.min.css" rel="stylesheet" />
@@ -78,9 +74,6 @@
         <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
-        </a>
         <div class="dropdown-menu dropdown-menu-right">
           <div class="dropdown-header text-center">
             <strong>Account</strong>
@@ -102,9 +95,9 @@
         </div>
       </li>
     </ul>
-    <button class="navbar-toggler aside-menu-toggler" type="button"  data-toggle="tab" href="#personel">
-      <span class="fa fa-folder-open"></span>
-    </button>
+    <a class="aside-toggle navbar-toggler aside-menu-toggler" href="#personel" role="button" data-toggle="tab" >
+        <img src="~/img/thumbnail.png" class="img-avatar" alt="PennyTechUser">
+    </a>
 
   </header>
     <div class="app-body">
@@ -113,9 +106,9 @@
           <main class="main">
 
               <!-- Breadcrumb -->
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">Admin</li>
-                <li class="breadcrumb-item active">Dashboard</li>
+              <ol class="breadcrumb" style="height:2.8rem">
+                  <li class="breadcrumb-item">@ViewBag.Head</li>
+                <li class="breadcrumb-item active">@ViewBag.Form</li>
 
                 <!-- Breadcrumb Menu-->
                 <li class="breadcrumb-menu d-md-down-none">
@@ -511,8 +504,8 @@
     </div>
 
     <footer class="app-footer">
-      <span><a href="http://coreui.io">PennyTech Systems</a> © 2018. </span>
-      <span class="ml-auto"> &nbsp Powered by <a href="http://coreui.io">PennyTech Systems</a></span>
+      <span><b style="color:#086986">PennyTech LMS [Logistic Management System] </b> © 2018. </span>
+      <span class="ml-auto" style="float:right"> &nbsp Powered by <a href="http://coreui.io">PennyTech Systems</a></span>
     </footer>
 
 

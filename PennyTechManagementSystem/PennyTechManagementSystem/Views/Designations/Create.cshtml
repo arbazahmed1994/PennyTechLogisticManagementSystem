@@ -1,0 +1,47 @@
+﻿@model PennyTechManagementSystem.Models.Designation
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-sm-12">
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DesignationName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DesignationName)
+                                    @Html.ValidationMessageFor(model => model.DesignationName)
+                                </div>
+                            </div>
+                            <p>
+                                <input type="submit" class="btn btn-sm btn-primary" value="Create" />
+                            </p>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                           
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+}

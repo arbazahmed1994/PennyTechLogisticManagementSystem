@@ -1,5 +1,11 @@
+using PennyTechManagementSystem;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.ComponentModel.DataAnnotations;
 
-namespace WindowsFormsApplication2
+namespace PennyTechManagementSystem.Models
 {
     public class Education
     {

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PennyTechManagementSystem.Models.Driver>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+
+<table class="table-custom table table-bordered table-striped table-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DriverName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DriverMobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DailyPityCash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DriverCNIC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrivingLicenceNumber)
+            </th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DriverName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DriverMobile)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DailyPityCash)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DriverCNIC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrivingLicenceNumber)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Driver", new { id=item.DriverCode })"><i class="fa fa-pencil"></i></a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Delete", "Driver", new { id=item.DriverCode })" onclick="return confirm('Do you really want to delete this item?')"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
