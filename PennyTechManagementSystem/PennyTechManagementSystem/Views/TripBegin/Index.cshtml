@@ -1,0 +1,90 @@
+﻿@model IEnumerable<PennyTechManagementSystem.Models.TripBeginModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table-custom table table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ReferenceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderCompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SourceLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DestinationLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderPersonName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderPersonContact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipmentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstimatedTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuiltyNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoadedWeight)
+            </th>
+            <th colspan="3">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReferenceDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderCompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SourceLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DestinationLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderPersonName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderPersonContact)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipmentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstimatedTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BuiltyNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LoadedWeight)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "TripBegin", new { id=item.ReferenceID })"><i class="fa fa-pencil"></i></a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Delete", "TripBegin", new { id=item.ReferenceID })" onclick="return confirm('Do you really want to delete this item?')"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,57 @@
+﻿@model PennyTechManagementSystem.Models.ExpenceNameModel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-sm-12">
+            @Html.HiddenFor(model => model.ExpenceNameID)
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.ExpenceName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.ExpenceName)
+                                    @Html.ValidationMessageFor(model => model.ExpenceName)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.ExpenceCategoryName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.ExpenceCategoryID , Model.ExpenceCategoryList)
+                                    @Html.ValidationMessageFor(model => model.ExpenceCategoryName)
+                                </div>
+                            </div>
+                            <p>
+                                <input type="submit" class="btn btn-sm btn-primary" value="Create" />
+                            </p>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                           
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+}

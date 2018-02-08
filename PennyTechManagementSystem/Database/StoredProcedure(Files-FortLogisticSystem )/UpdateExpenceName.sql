@@ -5,7 +5,7 @@ GO
 CREATE PROCEDURE UpdateExpenceName
 
 @ExpenceNameID INT,
-@ExpenceName VARCHAR(30),
+@ExpenceName VARCHAR(100),
 @ExpenceCategoryID INT
 
 AS

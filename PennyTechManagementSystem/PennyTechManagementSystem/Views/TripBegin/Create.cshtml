@@ -1,0 +1,181 @@
+﻿@model PennyTechManagementSystem.Models.TripBeginModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+        
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-sm-12">
+                            <div class="form-group">       
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.ReferenceDate)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.ReferenceDate,"{0:d}")
+                                    @Html.ValidationMessageFor(model => model.ReferenceDate)
+                                </div>
+                            </div>
+                            <div class="form-group">       
+                                   <div class="editor-label">
+                                    @Html.LabelFor(model => model.OrderCompanyName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.OrderCompanyName)
+                                    @Html.ValidationMessageFor(model => model.OrderCompanyName)
+                                </div>
+                            </div>
+                            <div class="form-group">       
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.VendorName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.VendorName)
+                                    @Html.ValidationMessageFor(model => model.VendorName)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.SourceLocation)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.SourceLocation)
+                                    @Html.ValidationMessageFor(model => model.SourceLocation)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DestinationLocation)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DestinationLocation)
+                                    @Html.ValidationMessageFor(model => model.DestinationLocation)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.ShipmentName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.ShipmentName)
+                                    @Html.ValidationMessageFor(model => model.ShipmentName)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.VehicleCode)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.VehicleCode, Model.VehicleList)
+                                    @Html.ValidationMessageFor(model => model.VehicleCode)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DriverCode)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.DriverCode, Model.DriverList)
+                                    @Html.ValidationMessageFor(model => model.DriverCode)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.OrderPersonName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.OrderPersonName)
+                                    @Html.ValidationMessageFor(model => model.OrderPersonName)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.OrderPersonContact)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.OrderPersonContact)
+                                    @Html.ValidationMessageFor(model => model.OrderPersonContact)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.StartingMeterReading)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.StartingMeterReading)
+                                    @Html.ValidationMessageFor(model => model.StartingMeterReading)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.EstimatedTime)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.EstimatedTime)
+                                    @Html.ValidationMessageFor(model => model.EstimatedTime)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.BuiltyNumber)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.BuiltyNumber)
+                                    @Html.ValidationMessageFor(model => model.BuiltyNumber)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.LoadedWeight)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.LoadedWeight)
+                                    @Html.ValidationMessageFor(model => model.LoadedWeight)
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            <input type="submit" class="btn btn-sm btn-primary" value="Create" />
+                        </p>
+                    </div>
+                    <div>
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>                   
+
+        
+}

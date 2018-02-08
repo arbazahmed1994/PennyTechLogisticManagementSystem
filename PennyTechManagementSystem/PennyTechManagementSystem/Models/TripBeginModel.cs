@@ -1,17 +1,64 @@
-﻿using System;
+﻿using PennyTechManagementSystem.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace PennyTechManagementSystem.Models
 {
     public class TripBeginModel : BaseModel<TripBeginModel>
     {
+        //Vehicle LIST
+        public IEnumerable<VehicleModel> Vehicles { get; set; }
+        public IEnumerable<SelectListItem> VehicleList { get; set; }
+        private string _vehicleCode = "0000";
+        [Required]
+        [Display(Name = "Vehicle", ResourceType = typeof(NameHandling))]
+        public string VehicleCode
+        {
+            get { return _vehicleCode; }
+            set { _vehicleCode = value; }
+        }
+
+        //Driver LIST
+        public IEnumerable<Driver> Drivers { get; set; }
+        public IEnumerable<SelectListItem> DriverList { get; set; }
+        private string _driverCode = "0000";
+        [Required]
+        [Display(Name = "Driver", ResourceType = typeof(NameHandling))]
+        public string DriverCode
+        {
+            get { return _driverCode; }
+            set { _driverCode = value; }
+        }
+
+        // CONSTRUCTOR
+
+        public TripBeginModel()
+        {
+            DriverRepository _driverRep = new DriverRepository();
+            Drivers = _driverRep.Get();
+            DriverList = Drivers.ToDriverSelectListItems(DriverCode);
+
+            VehicleRepository _vehicleRep = new VehicleRepository();
+            Vehicles = _vehicleRep.Get();
+            VehicleList = Vehicles.ToVehicleSelectListItems(VehicleCode);
+        }
+
+        
+        public int ReferenceID { get; set; }
+
+        public string VehicleNumber { get; set; }
+
+        public string DriverName { get; set; }
+
+        // REQUIRED --
 
         [DataType(DataType.Date)]
-        [Required]
         private DateTime _referenceDate = DateTime.Now.Date;
+        [Required]
         [Display(Name = "ReferenceDate", ResourceType = typeof(NameHandling))]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime ReferenceDate

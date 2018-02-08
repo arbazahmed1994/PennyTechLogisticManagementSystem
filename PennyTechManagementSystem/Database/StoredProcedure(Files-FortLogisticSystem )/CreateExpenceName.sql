@@ -4,14 +4,14 @@ GO
 
 CREATE PROCEDURE CreateExpenceName
 
-@ExpenceName VARCHAR(30),
+@ExpenceName VARCHAR(100),
 @ExpenceCategoryID INT
 
 AS
 
 BEGIN
 
-	IF NOT EXISTS (SELECT ExpenceName FROM ExpenceName WHERE ExpenceName = @ExpenceName)
+	IF NOT EXISTS (SELECT ExpenceName FROM ExpenceName WHERE ExpenceName = @ExpenceName AND ExpenceCategoryID = @ExpenceCategoryID)
 	BEGIN
 		INSERT INTO ExpenceName (
 			ExpenceName,
@@ -22,7 +22,7 @@ BEGIN
 	END
 	ELSE
 	BEGIN
-		RAISERROR ('Expence Name already Exist', 16, 1)
+		RAISERROR ('Expence already Exist', 16, 1)
 	END
 
 END

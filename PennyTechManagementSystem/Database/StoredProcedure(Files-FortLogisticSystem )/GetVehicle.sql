@@ -21,7 +21,7 @@ BEGIN
 		ChasisNumber,
 		EngineNumber,
 		EngineHorsePower,
-		StatusID,
+		CONVERT(INT,StatusID) AS StatusID,
 		ColorID,
 		PurchaseDate,
 		PurchaseFrom,

@@ -44,11 +44,11 @@ namespace PennyTechManagementSystem.Controllers
         {
             if (_rep.Delete(id) == 1)
             {
-
+                TempData["SuccessMessage"] = NameHandling.SuccessMessageDelete;
             }
             else
             {
-
+                TempData["ErrorMessage"] = NameHandling.ErrorMessage;
             }
 
             return RedirectToAction("Index");

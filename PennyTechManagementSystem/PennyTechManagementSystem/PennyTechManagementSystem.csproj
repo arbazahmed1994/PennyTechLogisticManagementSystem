@@ -120,8 +120,12 @@
     <Compile Include="Constant\ProcedureNameHandling.cs" />
     <Compile Include="Controllers\DesignationsController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
+    <Compile Include="Controllers\ExpenceCategoryController.cs" />
+    <Compile Include="Controllers\ExpenceNameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
+    <Compile Include="Controllers\TripBeginController.cs" />
+    <Compile Include="Controllers\TripEndController.cs" />
     <Compile Include="Controllers\VehicleBusinessTypeController.cs" />
     <Compile Include="Controllers\VehicleCompanyController.cs" />
     <Compile Include="Controllers\VehicleController.cs" />
@@ -142,6 +146,8 @@
     <Compile Include="Models\Driver.cs" />
     <Compile Include="Models\Education.cs" />
     <Compile Include="Models\EmployeeUser.cs" />
+    <Compile Include="Models\ExpenceCategoryModel.cs" />
+    <Compile Include="Models\ExpenceNameModel.cs" />
     <Compile Include="Models\Fleet.cs" />
     <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\HomeModel.cs" />
@@ -153,6 +159,8 @@
     <Compile Include="Models\Status.cs" />
     <Compile Include="Models\ThirdPartyVehicle.cs" />
     <Compile Include="Models\TripBeginModel.cs" />
+    <Compile Include="Models\TripEndModel.cs" />
+    <Compile Include="Models\TripExpenceDetailModel.cs" />
     <Compile Include="Models\VehicleBusinessType.cs" />
     <Compile Include="Models\VehicleCompany.cs" />
     <Compile Include="Models\VehicleModel.cs" />
@@ -166,13 +174,18 @@
     <Compile Include="Repository\BasicRepository.cs" />
     <Compile Include="Repository\DesignationsRepository.cs" />
     <Compile Include="Repository\DriverRepository.cs" />
+    <Compile Include="Repository\ExpenceCategoryRepository.cs" />
+    <Compile Include="Repository\ExpenceNameRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\NavbarRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\TripBeginRepository.cs" />
+    <Compile Include="Repository\TripEndRepository.cs" />
     <Compile Include="Repository\VehicleBusinessTypeRepository.cs" />
     <Compile Include="Repository\VehicleCompanyRepository.cs" />
     <Compile Include="Repository\VehicleRepository.cs" />
     <Compile Include="Repository\VehicleTypeRepository.cs" />
+    <Compile Include="View_Model\TripExpenceViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -262,6 +275,14 @@
     <Content Include="css\style.min.css" />
     <Content Include="font\fa\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\avatars\1.jpg" />
+    <Content Include="img\avatars\2.jpg" />
+    <Content Include="img\avatars\3.jpg" />
+    <Content Include="img\avatars\4.jpg" />
+    <Content Include="img\avatars\5.jpg" />
+    <Content Include="img\avatars\6.jpg" />
+    <Content Include="img\avatars\7.jpg" />
+    <Content Include="img\avatars\8.jpg" />
     <Content Include="img\dashboard\aside-bg.jpg" />
     <Content Include="img\dashboard\bank.png" />
     <Content Include="img\dashboard\industry-specific.png" />
@@ -439,6 +460,17 @@
     <Content Include="Views\Driver\Index.cshtml" />
     <Content Include="Views\Driver\Create.cshtml" />
     <Content Include="Views\Home\VehicleSupplementsDashboard.cshtml" />
+    <Content Include="Views\Driver\Edit.cshtml" />
+    <Content Include="Views\TripBegin\Index.cshtml" />
+    <Content Include="Views\TripBegin\Create.cshtml" />
+    <Content Include="Views\TripBegin\Edit.cshtml" />
+    <Content Include="Views\ExpenceCategory\Index.cshtml" />
+    <Content Include="Views\ExpenceCategory\Create.cshtml" />
+    <Content Include="Views\ExpenceCategory\Edit.cshtml" />
+    <Content Include="Views\ExpenceName\Index.cshtml" />
+    <Content Include="Views\ExpenceName\Create.cshtml" />
+    <Content Include="Views\ExpenceName\Edit.cshtml" />
+    <Content Include="Views\TripEnd\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

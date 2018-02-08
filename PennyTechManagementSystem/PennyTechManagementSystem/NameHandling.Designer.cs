@@ -61,11 +61,29 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Amount.
+        /// </summary>
+        public static string Amount {
+            get {
+                return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Builty Number.
         /// </summary>
         public static string BuiltyNumber {
             get {
                 return ResourceManager.GetString("BuiltyNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Comments.
+        /// </summary>
+        public static string Comments {
+            get {
+                return ResourceManager.GetString("Comments", resourceCulture);
             }
         }
         
@@ -93,6 +111,15 @@ namespace PennyTechManagementSystem {
         public static string DestinationLocation {
             get {
                 return ResourceManager.GetString("DestinationLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Driver.
+        /// </summary>
+        public static string Driver {
+            get {
+                return ResourceManager.GetString("Driver", resourceCulture);
             }
         }
         
@@ -133,6 +160,15 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End Date.
+        /// </summary>
+        public static string EndDate {
+            get {
+                return ResourceManager.GetString("EndDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your reques can not be completed.
         /// </summary>
         public static string ErrorMessage {
@@ -147,6 +183,51 @@ namespace PennyTechManagementSystem {
         public static string EstimatedTime {
             get {
                 return ResourceManager.GetString("EstimatedTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expence Category Name.
+        /// </summary>
+        public static string ExpenceCategoryName {
+            get {
+                return ResourceManager.GetString("ExpenceCategoryName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expence Name.
+        /// </summary>
+        public static string ExpenceName {
+            get {
+                return ResourceManager.GetString("ExpenceName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fuel Amount.
+        /// </summary>
+        public static string FuelAmount {
+            get {
+                return ResourceManager.GetString("FuelAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fuel Litre.
+        /// </summary>
+        public static string FuelLitre {
+            get {
+                return ResourceManager.GetString("FuelLitre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fuel Rate.
+        /// </summary>
+        public static string FuelRate {
+            get {
+                return ResourceManager.GetString("FuelRate", resourceCulture);
             }
         }
         
@@ -237,6 +318,15 @@ namespace PennyTechManagementSystem {
         public static string SuccessMessageDelete {
             get {
                 return ResourceManager.GetString("SuccessMessageDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle.
+        /// </summary>
+        public static string Vehicle {
+            get {
+                return ResourceManager.GetString("Vehicle", resourceCulture);
             }
         }
         

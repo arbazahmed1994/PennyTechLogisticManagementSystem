@@ -1,0 +1,151 @@
+﻿@model PennyTechManagementSystem.Models.TripEndModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+   
+        
+
+ <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.EndDate)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.EndDate,"{0:d}")
+                                    @Html.ValidationMessageFor(model => model.EndDate)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-9">
+                                        
+                            <table class="table table-sm">
+                            <thead style="background:whitesmoke">
+                                <tr>
+                                    <th>Expence Name</th>
+                                    <th>Amount</th>
+                                    <th>Comments</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (var i = 0; i < Model.TripExpenceList.Count(); i++)
+                                {
+                                    @Html.HiddenFor(model => model.TripExpenceList[i].ExpenceNameID)
+                                    @Html.HiddenFor(model => model.TripExpenceList[i].ExpenceName)
+                                    @Html.HiddenFor(model => model.TripExpenceList[i].Amount)
+                                    @Html.HiddenFor(model => model.TripExpenceList[i].Comments)
+                            
+                                    <tr>
+                                        @Html.HiddenFor(model => model.TripExpenceList[i].ExpenceNameID)
+                                        <td>
+                                            @Html.DisplayFor(model => model.TripExpenceList[i].ExpenceName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.TripExpenceList[i].Amount)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(model => model.TripExpenceList[i].Comments)
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                }
+                                <tr style="margin-top:20px">
+                                    <td>
+                                        @Html.TextBox("ExpenceNameValue", null, new { id = "searchTxt" })
+                                    </td>
+                                    <td>
+                                        @Html.TextBox("AmountValue", null)
+                                    </td>
+                                    <td>
+                                        @Html.TextBox("CommentsValue", null)
+                                        <input type="submit" class="btn btn-info btn-sm" value="Add Row" style="float:right" formaction="AddRow"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                               
+                    </div>
+                        <div class="col-sm-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    Fuel Expence
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                    
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <div class="editor-label">
+                                                    @Html.LabelFor(model => model.FuelLitre)
+                                                </div>
+                                                <div class="editor-field">
+                                                    @Html.EditorFor(model => model.FuelLitre)
+                                                    @Html.ValidationMessageFor(model => model.FuelLitre)
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="editor-label">
+                                                    @Html.LabelFor(model => model.FuelRate)
+                                                </div>
+                                                <div class="editor-field">
+                                                    @Html.EditorFor(model => model.FuelRate)
+                                                    @Html.ValidationMessageFor(model => model.FuelRate)
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="editor-label">
+                                                    @Html.LabelFor(model => model.FuelAmount)
+                                                </div>
+                                                <div class="editor-field">
+                                                    @Html.EditorFor(model => model.FuelAmount)
+                                                    @Html.ValidationMessageFor(model => model.FuelAmount)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            <input type="submit" class="btn btn-sm btn-primary" value="Create" />
+                        </p>
+                    </div>
+    
+                    <div>
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+   
+            </div>                        
+        </div>
+    </div>
+</div>
+            
+}
+
+
+
+<script>
+    $(function () {
+        $('#searchTxt').autocomplete({
+            source: 'Search/' //+ $("#TerminalID :selected").val()
+        });
+    })
+</script>
