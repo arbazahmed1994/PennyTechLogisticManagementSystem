@@ -18,11 +18,6 @@ namespace PennyTechManagementSystem.Models
         }
 
 
-        // UN-REQUIRED --
-
-        public int MainTripID { get; set; }
-
-
         // REQUIRED --
 
         [Required]
@@ -47,6 +42,11 @@ namespace PennyTechManagementSystem.Models
         [Required]
         public int TripReferenceID { get; set; }
 
+
+        // UN-REQUIRED --
+
+        public int MainTripID { get; set; }
+
         public List<TripExpenceViewModel> TripExpenceList { get; set; }
 
         public string TripExpenceListXML
@@ -62,6 +62,8 @@ namespace PennyTechManagementSystem.Models
                 return xmlElements.ToString();
             }
         }
+
+        //public List<TripBeginViewModel> TripBeginList { get; set; }
 
     }
 }

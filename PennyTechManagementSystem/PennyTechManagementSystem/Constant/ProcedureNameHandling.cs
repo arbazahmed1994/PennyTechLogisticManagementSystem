@@ -21,6 +21,10 @@ namespace PennyTechManagementSystem.Constant
 
         public static string DeleteSP;
 
+        // Public VARIABLES
+
         public static List<TripExpenceViewModel> list;
+
+        public static int TripReference;
     }
 }

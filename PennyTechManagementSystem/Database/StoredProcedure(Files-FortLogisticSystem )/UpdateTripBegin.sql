@@ -28,7 +28,7 @@ BEGIN
 		ReferenceDate = @ReferenceDate,
 		OrderCompanyName = @OrderCompanyName,
 		VendorName = @VendorName,
-		SourceLocaion = @SourceLocation,
+		SourceLocation = @SourceLocation,
 		DestinationLocation = @DestinationLocation,
 		VehicleCode = @VehicleCode,
 		DriverCode = @DriverCode,

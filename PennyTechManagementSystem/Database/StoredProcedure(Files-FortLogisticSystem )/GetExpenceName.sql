@@ -9,6 +9,7 @@ AS
 BEGIN
 
 	SELECT 
+		ExpenceNameID,
 		ExpenceName ,
 		EC.ExpenceCategoryName
 	FROM

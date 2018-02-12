@@ -27,7 +27,7 @@ BEGIN
 		ReferenceDate,
 		OrderCompanyName,
 		VendorName,
-		SourceLocaion,
+		SourceLocation,
 		DestinationLocation,
 		VehicleCode,
 		DriverCode,

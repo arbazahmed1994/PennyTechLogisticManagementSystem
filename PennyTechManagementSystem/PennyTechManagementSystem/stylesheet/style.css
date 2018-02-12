@@ -14,6 +14,15 @@ body {
     height: auto;
     width: 36px;
 }
+.tt {
+    margin: 10px;
+}
+    .tt > table > tbody > tr > td {
+        padding-left: 10px;
+        color: #086986;
+        font-weight: 500;
+    }
+
 .editor-label-log > label {
     color: white !important;
     margin-top: 10px;
@@ -526,14 +535,14 @@ ol {
     padding: 0.4rem !important;
     border: 1px solid #3ea59a !important;
     color: #fff !important;
-    background: #3ea59a !important;
+    background: #086986 !important;
 }
     .table-custom-1 > thead > tr > th:last-child {
         text-align:center !important;
     }
     .table-custom-1 > tbody > tr > td {
         padding: 0.3rem !important;
-        border: 1px solid #3ea59a !important;
+        border: 1px solid #086986 !important;
         font-weight: 300 !important;
     }
     .table-custom-1 > tbody > tr > td:nth-last-child(1) {

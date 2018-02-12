@@ -15,7 +15,7 @@ BEGIN
 		,ReferenceDate
 		,OrderCompanyName
 		,VendorName
-		,SourceLocaion
+		,SourceLocation
 		,DestinationLocation
 		,F.VehicleNumber
 		,D.DriverName

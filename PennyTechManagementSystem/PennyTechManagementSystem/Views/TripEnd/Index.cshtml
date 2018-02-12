@@ -1,0 +1,59 @@
+﻿@model IEnumerable<PennyTechManagementSystem.Models.TripBeginModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<table class="table-custom-1 table table-bordered table-striped table-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DriverName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderCompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SourceLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DestinationLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ShipmentName)
+            </th>
+            <th>End</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DriverName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderCompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SourceLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DestinationLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShipmentName)
+                </td>
+                <td>
+                    <a href="@Url.Action("Create", "TripEnd", new { id=item.ReferenceID })"><i class="fa fa-stop-circle-o"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

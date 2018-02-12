@@ -7,9 +7,39 @@
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-
-   
-        
+}
+@*<div class="tt">
+ <table>
+     <tr>
+         <td>Driver Name : </td>
+         <td>@Html.DisplayFor(model => model.TripBeginList[0].DriverName)</td>
+     </tr>
+     <tr>
+         <td>Vehicle Number : </td>
+         <td>@Html.DisplayFor(model => model.TripBeginList[0].VehicleNumber)</td>
+     </tr>
+     <tr>
+         <td>Order Company Name : </td>
+         <td>@Html.DisplayFor(model => model.TripBeginList[0].OrderCompanyName)</td>
+     </tr>
+     <tr>
+         <td>Source Location : </td>
+         <td>@Html.DisplayFor(model => model.TripBeginList[0].SourceLocation)</td>
+     </tr>
+     <tr>
+         <td>Destination Location : </td>
+         <td>@Html.DisplayFor(model => model.TripBeginList[0].DestinationLocation)</td>
+     </tr>
+     <tr>
+         <td>Builty Number : </td>
+         <td>@Html.DisplayFor(model => model.TripBeginList[0].BuiltyNumber)</td>
+     </tr>
+     <tr>
+         <td>Reference Date : </td>
+         <td>@Html.DisplayFor(model => model.TripBeginList[0].ReferenceDate)</td>
+     </tr>
+ </table>
+</div>*@
 
  <div class="row">
         <div class="col-sm-12">
@@ -37,7 +67,7 @@
                     <div class="row">
                         <div class="col-sm-9">
                                         
-                            <table class="table table-sm">
+                            <table class="table table-bordered table-sm">
                             <thead style="background:whitesmoke">
                                 <tr>
                                     <th>Expence Name</th>
@@ -64,10 +94,9 @@
                                         <td>
                                             @Html.DisplayFor(model => model.TripExpenceList[i].Comments)
                                         </td>
-                                        <td></td>
                                     </tr>
                                 }
-                                <tr style="margin-top:20px">
+                                <tr>
                                     <td>
                                         @Html.TextBox("ExpenceNameValue", null, new { id = "searchTxt" })
                                     </td>
@@ -76,7 +105,14 @@
                                     </td>
                                     <td>
                                         @Html.TextBox("CommentsValue", null)
-                                        <input type="submit" class="btn btn-info btn-sm" value="Add Row" style="float:right" formaction="AddRow"/>
+                                        @*<button type="submit" class="btn btn-info btn-sm" value="Add Row" onclick="alert('hello')">*@
+                                        @*@Html.Action("Add Row" , new { onClick= "addExpence()"})*@
+                                           
+                                        @*</button>*@
+
+                    <button class="btn-upgrade" type ="submit" value ="Upgrade" onclick="addExpence('@Model')">
+                        <i class="fa fa-upload"></i>
+                    </button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -125,7 +161,7 @@
                             </div>
                         </div>
                         <p>
-                            <input type="submit" class="btn btn-sm btn-primary" value="Create" />
+                            <input type="submit" class="btn btn-sm btn-primary" value="Create" formaction="Create" formmethod="POST"/>
                         </p>
                     </div>
     
@@ -137,15 +173,61 @@
         </div>
     </div>
 </div>
-            
-}
+          
+
+        
 
 
-
+    
 <script>
+
+    var urlService = 'http://localhost:61299/TripEnd/Search/';
     $(function () {
         $('#searchTxt').autocomplete({
-            source: 'Search/' //+ $("#TerminalID :selected").val()
+            source: urlService
         });
     })
-</script>
+
+    function addExpence(model) {
+        alert(model);
+        var Data = {};
+        Data.AmountValue = $('#AmountValue').val();
+        Data.CommentsValue = $('#CommentsValue').val();
+        Data.ExpenceNameValue = $('#searchTxt').val();
+        Data.oldModel = model;
+        $.ajax({
+          
+            url: document.location.origin + "/TripEnd/AddRow/",
+            dataType: 'json',
+            type: 'POST',
+
+            data: Data,
+
+            success: function (data) {
+                console.log(data)
+                if (data.IsSuccess) {
+            
+                    // Clear the input tags
+                    console.log(data)
+           
+                    formContainer.find("input[type='text']").each(function (i, element) {
+                 
+                        $(this).val('');
+                  
+                    });
+             
+                }
+        
+                alert(data.Message);
+           
+            },
+
+            error: function (jqXHR, textStatus, errorThrown) {
+         
+                alert(errorThrown);
+       
+            }
+        })
+    }
+</script> 
+

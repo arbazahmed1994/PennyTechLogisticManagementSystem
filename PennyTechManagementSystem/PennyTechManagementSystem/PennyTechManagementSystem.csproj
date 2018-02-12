@@ -185,6 +185,7 @@
     <Compile Include="Repository\VehicleCompanyRepository.cs" />
     <Compile Include="Repository\VehicleRepository.cs" />
     <Compile Include="Repository\VehicleTypeRepository.cs" />
+    <Compile Include="View_Model\TripBeginViewModel.cs" />
     <Compile Include="View_Model\TripExpenceViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -471,6 +472,7 @@
     <Content Include="Views\ExpenceName\Create.cshtml" />
     <Content Include="Views\ExpenceName\Edit.cshtml" />
     <Content Include="Views\TripEnd\Create.cshtml" />
+    <Content Include="Views\TripEnd\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
