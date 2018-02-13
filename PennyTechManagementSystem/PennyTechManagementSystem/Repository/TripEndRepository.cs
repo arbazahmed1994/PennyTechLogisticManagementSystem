@@ -20,7 +20,7 @@ namespace PennyTechManagementSystem.Repository
         public override string GetByStringSPName { get { return string.Empty; } }
         public override string DeleteSPName { get { return ""; } }
         public override string DeleteByStringSPName { get { return string.Empty; } }
-        public override string CreateSPName { get { return ""; } }
+        public override string CreateSPName { get { return "CreateTripEnd"; } }
         public override string EditSPName { get { return ""; } }
         public override string GetByModelSPName { get { return string.Empty; } }
 
@@ -29,6 +29,12 @@ namespace PennyTechManagementSystem.Repository
         {
             DataSet list = db.ExecuteDataSet("GetExpenceName");
             return list.Tables[0].ConvertToList<TripExpenceViewModel>();
+        }
+
+        public IEnumerable<TripBeginModel> GetEndedList()
+        {
+            DataSet ds = db.ExecuteDataSet("GetEndedTrips");
+            return ds.Tables[0].ConvertToList<TripBeginModel>();
         }
     }
 }

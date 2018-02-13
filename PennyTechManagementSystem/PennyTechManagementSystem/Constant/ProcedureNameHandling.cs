@@ -1,4 +1,5 @@
-﻿using PennyTechManagementSystem.Repository;
+﻿using PennyTechManagementSystem.Models;
+using PennyTechManagementSystem.Repository;
 using PennyTechManagementSystem.View_Model;
 using System;
 using System.Collections.Generic;
@@ -26,5 +27,7 @@ namespace PennyTechManagementSystem.Constant
         public static List<TripExpenceViewModel> list;
 
         public static int TripReference;
+
+        public static List<TripBeginViewModel> TripBeginList;
     }
 }

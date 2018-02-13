@@ -79,11 +79,47 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chasis Number.
+        /// </summary>
+        public static string ChasisNumber {
+            get {
+                return ResourceManager.GetString("ChasisNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color.
+        /// </summary>
+        public static string Color {
+            get {
+                return ResourceManager.GetString("Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Comments.
         /// </summary>
         public static string Comments {
             get {
                 return ResourceManager.GetString("Comments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company.
+        /// </summary>
+        public static string Company {
+            get {
+                return ResourceManager.GetString("Company", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string Country {
+            get {
+                return ResourceManager.GetString("Country", resourceCulture);
             }
         }
         
@@ -169,6 +205,24 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Engine Horse Power.
+        /// </summary>
+        public static string EngineHorsePower {
+            get {
+                return ResourceManager.GetString("EngineHorsePower", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Engine Number.
+        /// </summary>
+        public static string EngineNumber {
+            get {
+                return ResourceManager.GetString("EngineNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your reques can not be completed.
         /// </summary>
         public static string ErrorMessage {
@@ -241,6 +295,42 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Manufacture Date.
+        /// </summary>
+        public static string ManufactureDate {
+            get {
+                return ResourceManager.GetString("ManufactureDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manufactured From.
+        /// </summary>
+        public static string ManufacturedFrom {
+            get {
+                return ResourceManager.GetString("ManufacturedFrom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Model Year.
+        /// </summary>
+        public static string ModelYear {
+            get {
+                return ResourceManager.GetString("ModelYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number Of Wheels.
+        /// </summary>
+        public static string NumberOfWheels {
+            get {
+                return ResourceManager.GetString("NumberOfWheels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Order Company Name.
         /// </summary>
         public static string OrderCompanyName {
@@ -264,6 +354,24 @@ namespace PennyTechManagementSystem {
         public static string OrderPersonName {
             get {
                 return ResourceManager.GetString("OrderPersonName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purchase Date.
+        /// </summary>
+        public static string PurchaseDate {
+            get {
+                return ResourceManager.GetString("PurchaseDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Purchase From.
+        /// </summary>
+        public static string PurchaseFrom {
+            get {
+                return ResourceManager.GetString("PurchaseFrom", resourceCulture);
             }
         }
         
@@ -313,6 +421,15 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Status.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your request for deleting is completed successfully.
         /// </summary>
         public static string SuccessMessageDelete {
@@ -340,11 +457,56 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vehicle Busuness Type.
+        /// </summary>
+        public static string VehicleBusunessType {
+            get {
+                return ResourceManager.GetString("VehicleBusunessType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vehicle Company Name.
         /// </summary>
         public static string VehicleCompanyName {
             get {
                 return ResourceManager.GetString("VehicleCompanyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle Lenght.
+        /// </summary>
+        public static string VehicleLenght {
+            get {
+                return ResourceManager.GetString("VehicleLenght", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle Model Name.
+        /// </summary>
+        public static string VehicleModelName {
+            get {
+                return ResourceManager.GetString("VehicleModelName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle Number.
+        /// </summary>
+        public static string VehicleNumber {
+            get {
+                return ResourceManager.GetString("VehicleNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle Type.
+        /// </summary>
+        public static string VehicleType {
+            get {
+                return ResourceManager.GetString("VehicleType", resourceCulture);
             }
         }
         

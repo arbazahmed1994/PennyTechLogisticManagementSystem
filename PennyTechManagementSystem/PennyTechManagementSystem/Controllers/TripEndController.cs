@@ -1,4 +1,5 @@
-﻿using PennyTechManagementSystem.Constant;
+﻿using PennyTechManagementSystem.Common;
+using PennyTechManagementSystem.Constant;
 using PennyTechManagementSystem.Models;
 using PennyTechManagementSystem.Repository;
 using PennyTechManagementSystem.View_Model;
@@ -12,7 +13,6 @@ namespace PennyTechManagementSystem.Controllers
 {
     public class TripEndController : Controller
     {
-
         private TripEndRepository _rep = new TripEndRepository();
         private TripBeginRepository _repBegin = new TripBeginRepository();
 
@@ -25,6 +25,15 @@ namespace PennyTechManagementSystem.Controllers
             return View(model);
         }
 
+        public ActionResult IndexEndedList()
+        {
+            ViewBag.Head = "Manage End Trip";
+            ViewBag.Form = "Ended Trips List";
+
+            IEnumerable<TripBeginModel> EndedTripModel = _rep.GetEndedList();
+            return View(EndedTripModel);
+        }
+
         [HttpGet]
         public ActionResult Create( int id )
         {
@@ -32,27 +41,40 @@ namespace PennyTechManagementSystem.Controllers
             ViewBag.Form = "End Trips List";
 
             TripEndModel model = new TripEndModel();
-
-            //model.TripBeginList = _repBegin.GetList(id).ToList();
+            
+            ProcedureNameHandling.TripBeginList = _repBegin.GetList(id).ToList();
+            model.TripBeginList = ProcedureNameHandling.TripBeginList;
             ProcedureNameHandling.TripReference = id;
             ProcedureNameHandling.list = _rep.GetExpenceList().ToList();
 
             return View(model);
         }
         [HttpPost]
+        [MultipleButton(Name = "action", Argument = "Create")]
         public ActionResult Create(TripEndModel model)
         {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _rep.Create(model);
-                    return RedirectToAction("Index");
-                }
-                catch (Exception)
-                {
+            ViewBag.Head = "Manage End Trip";
+            ViewBag.Form = "End Trips List";
 
-                    throw;
+            model.TripReferenceID = ProcedureNameHandling.TripReference;
+            if (model.EndDate >= DateTime.Now.Date)
+            {
+                if (ModelState.IsValid)
+                {
+                    try
+                    {
+                        _rep.Create(model);
+                        return RedirectToAction("Index");
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+                }
+                else
+                {
+                    return View(model);
                 }
             }
             else
@@ -72,7 +94,8 @@ namespace PennyTechManagementSystem.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddRow(TripEndModel oldModel, string ExpenceNameValue, decimal AmountValue, string CommentsValue)
+        [MultipleButton(Name = "action" , Argument = "AddRow")]
+        public ActionResult AddRow(TripEndModel oldModel , string ExpenceNameValue, decimal AmountValue, string CommentsValue)
         {
             ViewBag.Head = "Manage End Trip";
             ViewBag.Form = "End Trips List";
@@ -85,7 +108,8 @@ namespace PennyTechManagementSystem.Controllers
             ExpenceNameValue = "";
             AmountValue = 0;
             CommentsValue = "";
-            return View("Create");//, oldModel);
+            oldModel.TripBeginList = ProcedureNameHandling.TripBeginList;
+            return View("Create", oldModel);
         }
 
         

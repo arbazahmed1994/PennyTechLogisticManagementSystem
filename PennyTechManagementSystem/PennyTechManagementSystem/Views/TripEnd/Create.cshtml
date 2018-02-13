@@ -5,10 +5,11 @@
     Layout = "~/Views/Shared/_NestedLayout.cshtml";
 }
 
+
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-}
-@*<div class="tt">
+
+<div class="tt">
  <table>
      <tr>
          <td>Driver Name : </td>
@@ -39,7 +40,7 @@
          <td>@Html.DisplayFor(model => model.TripBeginList[0].ReferenceDate)</td>
      </tr>
  </table>
-</div>*@
+</div>
 
  <div class="row">
         <div class="col-sm-12">
@@ -105,14 +106,11 @@
                                     </td>
                                     <td>
                                         @Html.TextBox("CommentsValue", null)
-                                        @*<button type="submit" class="btn btn-info btn-sm" value="Add Row" onclick="alert('hello')">*@
-                                        @*@Html.Action("Add Row" , new { onClick= "addExpence()"})*@
-                                           
-                                        @*</button>*@
-
-                    <button class="btn-upgrade" type ="submit" value ="Upgrade" onclick="addExpence('@Model')">
-                        <i class="fa fa-upload"></i>
-                    </button>
+                                        @*@Html.ActionLink("Add Row", "AddRow")*@
+                                        @*<button class="btn-upgrade" type ="submit" value ="Upgrade" onclick="addExpence(@Model)">
+                                            <i class="fa fa-upload"></i>
+                                        </button>*@
+                                        <input type="submit" class="btn btn-sm btn-primary" value="Add Row"  name="action:AddRow" />
                                     </td>
                                 </tr>
                             </tbody>
@@ -161,7 +159,7 @@
                             </div>
                         </div>
                         <p>
-                            <input type="submit" class="btn btn-sm btn-primary" value="Create" formaction="Create" formmethod="POST"/>
+                            <input type="submit" class="btn btn-sm btn-primary" value="Create"  name="action:Create" />
                         </p>
                     </div>
     
@@ -175,7 +173,9 @@
 </div>
           
 
-        
+    
+}
+
 
 
     
@@ -189,7 +189,7 @@
     })
 
     function addExpence(model) {
-        alert(model);
+
         var Data = {};
         Data.AmountValue = $('#AmountValue').val();
         Data.CommentsValue = $('#CommentsValue').val();
@@ -230,4 +230,3 @@
         })
     }
 </script> 
-

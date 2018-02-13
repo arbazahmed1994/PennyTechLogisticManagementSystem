@@ -1,13 +1,13 @@
-IF EXISTS (Select 1 FROM sys.objects WHERE type='P' and name='GetTripBegin')
-	DROP PROCEDURE GetTripBegin
+IF EXISTS (Select 1 FROM sys.objects WHERE type='P' and name='GetEndedTrips')
+	DROP PROCEDURE GetEndedTrips
 GO
 
-CREATE PROCEDURE GetTripBegin
+CREATE PROCEDURE GetEndedTrips
 
-AS
+AS 
 
 BEGIN
-
+	
 	SELECT 
 		ReferenceID
 		,ReferenceDate
@@ -35,8 +35,6 @@ BEGIN
 		INNER JOIN Fleet AS F ON F.VehicleCode = TB.VehicleCode
 		INNER JOIN Driver AS D ON D.DriverCode = TB.DriverCode
 	WHERE 
-		TB.IsEnded = 0
+		TB.IsEnded = 1
 
 END
-
-

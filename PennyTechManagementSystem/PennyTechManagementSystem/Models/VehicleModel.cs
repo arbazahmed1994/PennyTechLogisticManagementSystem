@@ -21,7 +21,7 @@ namespace PennyTechManagementSystem.Models
         public IEnumerable<SelectListItem> countrieslist { get; set; }
         private int _countryid = 0;
         [Required]
-        [Display(Name = "country", ResourceType = typeof(NameHandling))]
+        [Display(Name = "Country", ResourceType = typeof(NameHandling))]
         public int CountryID
         {
             get { return _countryid; }
@@ -33,7 +33,7 @@ namespace PennyTechManagementSystem.Models
         public IEnumerable<SelectListItem> statuslist { get; set; }
         private int _statusid = 0;
         [Required]
-        [Display(Name = "status", ResourceType = typeof(NameHandling))]
+        [Display(Name = "Status", ResourceType = typeof(NameHandling))]
         public int StatusID
         {
             get { return _statusid; }
@@ -45,7 +45,7 @@ namespace PennyTechManagementSystem.Models
         public IEnumerable<SelectListItem> vehicletypelist { get; set; }
         private int _vehicletypeid = 0;
         [Required]
-        [Display(Name = "vehicletype", ResourceType = typeof(NameHandling))]
+        [Display(Name = "VehicleType", ResourceType = typeof(NameHandling))]
         public int VehicleTypeID
         {
             get { return _vehicletypeid; }
@@ -57,7 +57,7 @@ namespace PennyTechManagementSystem.Models
         public IEnumerable<SelectListItem> vehiclebusinesstypelist { get; set; }
         private int _vehiclebusunesstype = 0;
         [Required]
-        [Display(Name = "vehiclebusunesstype", ResourceType = typeof(NameHandling))]
+        [Display(Name = "VehicleBusunessType", ResourceType = typeof(NameHandling))]
         public int VehicleBusinessTypeID
         {
             get { return _vehiclebusunesstype; }
@@ -69,7 +69,7 @@ namespace PennyTechManagementSystem.Models
         public IEnumerable<SelectListItem> vehiclecompanylist { get; set; }
         private int _vehiclecompanyid = 0;
         [Required]
-        [Display(Name = "company", ResourceType = typeof(NameHandling))]
+        [Display(Name = "Company", ResourceType = typeof(NameHandling))]
         public int VehicleCompanyID
         {
             get { return _vehiclecompanyid; }
@@ -81,7 +81,7 @@ namespace PennyTechManagementSystem.Models
         public IEnumerable<SelectListItem> colorlist { get; set; }
         private int _colorid = 0;
         [Required]
-        [Display(Name = "color", ResourceType = typeof(NameHandling))]
+        [Display(Name = "Color", ResourceType = typeof(NameHandling))]
         public int ColorID
         {
             get { return _colorid; }
@@ -118,6 +118,18 @@ namespace PennyTechManagementSystem.Models
 
 
         public string VehicleCode { get; set; }
+
+        public string CountryName { get; set; }
+
+        public string StatusName { get; set; }
+
+        public string VehicleTypeName { get; set; }
+
+        public string VehicleBusinessTypeName { get; set; }
+
+        public string VehicleCompanyName { get; set; }
+
+        public string ColorName { get; set; }
 
 
         // REQUIRED

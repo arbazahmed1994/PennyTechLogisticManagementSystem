@@ -1,0 +1,166 @@
+﻿@model PennyTechManagementSystem.Models.VehicleModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>VehicleModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CountryID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.CountryID, Model.countrieslist)
+            @Html.ValidationMessageFor(model => model.CountryID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StatusID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.StatusID , Model.statuslist)
+            @Html.ValidationMessageFor(model => model.StatusID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleTypeID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.VehicleTypeID, Model.vehicletypelist)
+            @Html.ValidationMessageFor(model => model.VehicleTypeID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleBusinessTypeID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.VehicleBusinessTypeID, Model.vehiclebusinesstypelist)
+            @Html.ValidationMessageFor(model => model.VehicleBusinessTypeID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleCompanyID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.VehicleCompanyID, Model.vehiclecompanylist)
+            @Html.ValidationMessageFor(model => model.VehicleCompanyID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ColorID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.ColorID, Model.colorlist)
+            @Html.ValidationMessageFor(model => model.ColorID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VehicleNumber)
+            @Html.ValidationMessageFor(model => model.VehicleNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleLenght)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VehicleLenght)
+            @Html.ValidationMessageFor(model => model.VehicleLenght)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ModelYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ModelYear)
+            @Html.ValidationMessageFor(model => model.ModelYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NumberOfWheels)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NumberOfWheels)
+            @Html.ValidationMessageFor(model => model.NumberOfWheels)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ChasisNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ChasisNumber)
+            @Html.ValidationMessageFor(model => model.ChasisNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EngineNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EngineNumber)
+            @Html.ValidationMessageFor(model => model.EngineNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EngineHorsePower)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EngineHorsePower)
+            @Html.ValidationMessageFor(model => model.EngineHorsePower)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PurchaseDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PurchaseDate,"{0:d}")
+            @Html.ValidationMessageFor(model => model.PurchaseDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PurchaseFrom)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PurchaseFrom)
+            @Html.ValidationMessageFor(model => model.PurchaseFrom)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ManufactureDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ManufactureDate,"{0:d}")
+            @Html.ValidationMessageFor(model => model.ManufactureDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ManufacturedFrom)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ManufacturedFrom)
+            @Html.ValidationMessageFor(model => model.ManufacturedFrom)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleModelName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VehicleModelName)
+            @Html.ValidationMessageFor(model => model.VehicleModelName)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

@@ -37,7 +37,10 @@ namespace PennyTechManagementSystem.Models
         [Required]
         [Display(Name = "EndDate", ResourceType = typeof(NameHandling))]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime EndDate { get; set; }
+        public DateTime EndDate {
+            get { return _endDate; }
+            set { _endDate = value; }
+        }
 
         [Required]
         public int TripReferenceID { get; set; }
@@ -63,7 +66,7 @@ namespace PennyTechManagementSystem.Models
             }
         }
 
-        //public List<TripBeginViewModel> TripBeginList { get; set; }
+        public List<TripBeginViewModel> TripBeginList { get; set; }
 
     }
 }

@@ -1,17 +1,14 @@
 ﻿@model IEnumerable<PennyTechManagementSystem.Models.TripBeginModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "IndexEndedList";
     Layout = "~/Views/Shared/_NestedLayout.cshtml";
 }
-<table class="table-custom-1 table table-bordered table-striped table-sm">
+<table class="table-custom-1 table table-bordered table-sm">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.VehicleNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DriverName)
+                @Html.DisplayNameFor(model => model.ReferenceDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.OrderCompanyName)
@@ -23,19 +20,22 @@
                 @Html.DisplayNameFor(model => model.DestinationLocation)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.OrderPersonName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderPersonContact)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.ShipmentName)
             </th>
-            <th>End</th>
+            <th colspan="1"></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model) {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.VehicleNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DriverName)
+                    @Html.DisplayFor(modelItem => item.ReferenceDate)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.OrderCompanyName)
@@ -47,14 +47,18 @@
                     @Html.DisplayFor(modelItem => item.DestinationLocation)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.OrderPersonName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderPersonContact)
+                </td>
+                <td>
                     @Html.DisplayFor(modelItem => item.ShipmentName)
                 </td>
                 <td>
-                    <a href="@Url.Action("Create", "TripEnd", new { id=item.ReferenceID })"><i class="fa fa-stop-circle-o"></i></a>
+                    <a href="@Url.Action("Edit", "TripBegin", new { id=item.ReferenceID })"><i class="fa fa-pencil"></i></a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
-
-
