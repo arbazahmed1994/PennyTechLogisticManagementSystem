@@ -250,6 +250,15 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Expence Mode.
+        /// </summary>
+        public static string ExpenceMode {
+            get {
+                return ResourceManager.GetString("ExpenceMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Expence Name.
         /// </summary>
         public static string ExpenceName {
@@ -385,6 +394,42 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rent Amount.
+        /// </summary>
+        public static string RentAmount {
+            get {
+                return ResourceManager.GetString("RentAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RentIn Date.
+        /// </summary>
+        public static string RentInDate {
+            get {
+                return ResourceManager.GetString("RentInDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Returned.
+        /// </summary>
+        public static string Returned {
+            get {
+                return ResourceManager.GetString("Returned", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Returned Date.
+        /// </summary>
+        public static string ReturnedDate {
+            get {
+                return ResourceManager.GetString("ReturnedDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Salary.
         /// </summary>
         public static string Salary {
@@ -498,6 +543,15 @@ namespace PennyTechManagementSystem {
         public static string VehicleNumber {
             get {
                 return ResourceManager.GetString("VehicleNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vehicle Owner Name.
+        /// </summary>
+        public static string VehicleOwnerName {
+            get {
+                return ResourceManager.GetString("VehicleOwnerName", resourceCulture);
             }
         }
         

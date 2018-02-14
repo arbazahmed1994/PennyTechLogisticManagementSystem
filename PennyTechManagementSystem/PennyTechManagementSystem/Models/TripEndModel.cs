@@ -36,7 +36,7 @@ namespace PennyTechManagementSystem.Models
         private DateTime _endDate = DateTime.Now.Date;
         [Required]
         [Display(Name = "EndDate", ResourceType = typeof(NameHandling))]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime EndDate {
             get { return _endDate; }
             set { _endDate = value; }

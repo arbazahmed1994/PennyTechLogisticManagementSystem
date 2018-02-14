@@ -14,6 +14,29 @@ body {
     height: auto;
     width: 36px;
 }
+
+p > a {
+    font-weight: 600;
+    font-size: 15px;
+    color: #0290bb;
+    font-family: century gothic;
+}
+.display-label {
+    border: 0.5px solid lightgrey;
+    background: white;
+    text-align: left;
+    padding: 5px;
+    font-weight: 600;
+    color: #086986;
+}
+.display-field {
+    border: 0.5px solid lightgrey;
+    background: white;
+    text-align:right;
+    padding: 5px;
+    color: #086986;
+}
+
 .tt {
     margin: 10px;
 }
@@ -22,6 +45,7 @@ body {
         color: #086986;
         font-weight: 500;
     }
+
 
 .editor-label-log > label {
     color: white !important;
@@ -72,6 +96,7 @@ ol {
 }
 .card {
     box-shadow: 0 0 5px #8a8a8a;
+    border-radius: 0;
 }
 .navbar-brand > h6 {
     display: inline-block;
@@ -130,6 +155,10 @@ ol {
 }
 .editor-label > span {
     color: red;
+}
+.field-validation-error {
+    color: tomato;
+    position: absolute;
 }
 .editor-field-c > input[type="checkbox"] {
     height: 24px;
@@ -573,9 +602,12 @@ ol {
     background: white;
 }
     .table-custom > thead > tr > th {
-        text-align: center;
+        text-align: center !important;
         color:#055067;
         font-weight: 500;
+    }
+    .table-custom > tbody > tr > th {
+        text-align: center !important;
     }
 .table-custom > tbody > tr > td:nth-last-child(1) , .table-custom > tbody > tr > td:nth-last-child(2) {
     text-align: center !important;
@@ -614,7 +646,7 @@ ol {
     background: white;
 }
     .table-custom-3 > thead > tr > th:last-child {
-        text-align:center !important;
+        text-align: center !important;
         background: white;
     }
     .table-custom-3 > tbody > tr > td {

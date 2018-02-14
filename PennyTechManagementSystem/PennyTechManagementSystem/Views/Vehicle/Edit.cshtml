@@ -1,7 +1,7 @@
 ﻿@model PennyTechManagementSystem.Models.VehicleModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_NestedLayout.cshtml";
 }
 
@@ -20,6 +20,9 @@
                     
                         <div class="col-sm-12">
                             <div class="form-group">
+
+                            @Html.HiddenFor(model => model.VehicleCode)
+
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.VehicleNumber)
                                 </div>
@@ -100,7 +103,8 @@
                                     @Html.LabelFor(model => model.ChasisNumber)
                                 </div>
                                 <div class="editor-field">
-                                    @Html.EditorFor(model => model.ChasisNumber)
+                                    @Html.TextBoxFor(model => model.ChasisNumber, new {disabled= "disabled" })
+                                    @Html.HiddenFor(model => model.ChasisNumber)
                                     @Html.ValidationMessageFor(model => model.ChasisNumber)
                                 </div>
                             </div>
@@ -217,7 +221,7 @@
                         </div>
 
                         <p>
-                            <input type="submit" class="btn btn-sm btn-primary" value="Create" />
+                            <input type="submit" class="btn btn-sm btn-primary" value="Update" />
                         </p>
 
                     </div>
@@ -229,6 +233,6 @@
                 
             </div>
         </div>
-    </div>                
-
+    </div>   
+    
 }

@@ -181,52 +181,16 @@
     
 <script>
 
+
     var urlService = 'http://localhost:61299/TripEnd/Search/';
     $(function () {
+        $('#searchTxt').val('');
+        $('#AmountValue').val('');
+        $('#CommentsValue').val('');
         $('#searchTxt').autocomplete({
             source: urlService
         });
     })
-
-    function addExpence(model) {
-
-        var Data = {};
-        Data.AmountValue = $('#AmountValue').val();
-        Data.CommentsValue = $('#CommentsValue').val();
-        Data.ExpenceNameValue = $('#searchTxt').val();
-        Data.oldModel = model;
-        $.ajax({
-          
-            url: document.location.origin + "/TripEnd/AddRow/",
-            dataType: 'json',
-            type: 'POST',
-
-            data: Data,
-
-            success: function (data) {
-                console.log(data)
-                if (data.IsSuccess) {
-            
-                    // Clear the input tags
-                    console.log(data)
-           
-                    formContainer.find("input[type='text']").each(function (i, element) {
-                 
-                        $(this).val('');
-                  
-                    });
-             
-                }
-        
-                alert(data.Message);
-           
-            },
-
-            error: function (jqXHR, textStatus, errorThrown) {
-         
-                alert(errorThrown);
-       
-            }
-        })
-    }
+    
+    
 </script> 

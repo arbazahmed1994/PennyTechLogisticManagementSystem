@@ -162,11 +162,11 @@ namespace PennyTechManagementSystem.Models
         [Display(Name = "EngineHorsePower", ResourceType = typeof(NameHandling))]
         public string EngineHorsePower { get; set; }
 
+        [DataType(DataType.Date)]
         private DateTime _purchaseDate = DateTime.Now.Date;
         [Required]
-        [DataType(DataType.Date)]
         [Display(Name = "PurchaseDate", ResourceType = typeof(NameHandling))]
-        [DisplayFormat(DataFormatString = "{0:yyyy-mm-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime PurchaseDate
         {
             get { return _purchaseDate; }
@@ -177,11 +177,11 @@ namespace PennyTechManagementSystem.Models
         [Display(Name = "PurchaseFrom", ResourceType = typeof(NameHandling))]
         public string PurchaseFrom { get; set; }
 
+        [DataType(DataType.Date)]
         private DateTime _manufactureDate = DateTime.Now.Date;
         [Required]
-        [DataType(DataType.Date)]
         [Display(Name = "ManufactureDate", ResourceType = typeof(NameHandling))]
-        [DisplayFormat(DataFormatString = "{0:yyyy-mm-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime ManufactureDate
         {
             get { return _manufactureDate; }

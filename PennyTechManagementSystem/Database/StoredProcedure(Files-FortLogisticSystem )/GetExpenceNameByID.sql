@@ -12,7 +12,8 @@ BEGIN
 
 	SELECT 
 		ExpenceName ,
-		EC.ExpenceCategoryName
+		EC.ExpenceCategoryName,
+		EN.ExpenceCategoryID
 	FROM
 		ExpenceName AS EN
 	INNER JOIN ExpenceCategory AS EC

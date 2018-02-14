@@ -27,33 +27,33 @@ AS
 
 BEGIN
 
-	INSERT INTO [dbo].[Fleet]
-			   ([VehicleCode]
-			   ,[VehicleNumber]
-			   ,[VehicleTypeID]
-			   ,[VehicleBusinessTypeID]
-			   ,[VehicleCompanyID]
-			   ,[VehicleLenght]
-			   ,[ModelYear]
-			   ,[CountryID]
-			   ,[NumberOfWheels]
-			   ,[ChasisNumber]
-			   ,[EngineNumber]
-			   ,[EngineHorsePower]
-			   ,[StatusID]
-			   ,[ColorID]
-			   ,[PurchaseDate]
-			   ,[PurchaseFrom]
-			   ,[ManufactureDate]
-			   ,[ManufacturedFrom]
-			   ,[VehicleModelName]
-			   ,[IsDepreciated]
-			   ,[IsDeleted]
-			   ,[DeletedBy]
-			   ,[IsUpdated]
-			   ,[UpdatedBy]
-			   ,[DeletedDate]
-			   ,[VehicleEntryDate])
+	INSERT INTO dbo.Fleet
+			   (VehicleCode
+			   ,VehicleNumber
+			   ,VehicleTypeID
+			   ,VehicleBusinessTypeID
+			   ,VehicleCompanyID
+			   ,VehicleLenght
+			   ,ModelYear
+			   ,CountryID
+			   ,NumberOfWheels
+			   ,ChasisNumber
+			   ,EngineNumber
+			   ,EngineHorsePower
+			   ,StatusID
+			   ,ColorID
+			   ,PurchaseDate
+			   ,PurchaseFrom
+			   ,ManufactureDate
+			   ,ManufacturedFrom
+			   ,VehicleModelName
+			   ,IsDepreciated
+			   ,IsDeleted
+			   ,DeletedBy
+			   ,IsUpdated
+			   ,UpdatedBy
+			   ,DeletedDate
+			   ,VehicleEntryDate)
 		 VALUES
 			   ( ( SELECT RIGHT('0000'+CAST(ISNULL(MAX(CONVERT(int,VehicleCode)),0)+1 AS VARCHAR),4) as code from Fleet ),
 				@VehicleNumber,

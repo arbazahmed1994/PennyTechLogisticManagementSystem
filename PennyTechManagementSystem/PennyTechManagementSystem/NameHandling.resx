@@ -180,6 +180,9 @@
   <data name="ExpenceCategoryName" xml:space="preserve">
     <value>Expence Category Name</value>
   </data>
+  <data name="ExpenceMode" xml:space="preserve">
+    <value>Expence Mode</value>
+  </data>
   <data name="ExpenceName" xml:space="preserve">
     <value>Expence Name</value>
   </data>
@@ -225,6 +228,18 @@
   <data name="ReferenceDate" xml:space="preserve">
     <value>Reference Date</value>
   </data>
+  <data name="RentAmount" xml:space="preserve">
+    <value>Rent Amount</value>
+  </data>
+  <data name="RentInDate" xml:space="preserve">
+    <value>RentIn Date</value>
+  </data>
+  <data name="Returned" xml:space="preserve">
+    <value>Returned</value>
+  </data>
+  <data name="ReturnedDate" xml:space="preserve">
+    <value>Returned Date</value>
+  </data>
   <data name="Salary" xml:space="preserve">
     <value>Salary</value>
   </data>
@@ -263,6 +278,9 @@
   </data>
   <data name="VehicleNumber" xml:space="preserve">
     <value>Vehicle Number</value>
+  </data>
+  <data name="VehicleOwnerName" xml:space="preserve">
+    <value>Vehicle Owner Name</value>
   </data>
   <data name="VehicleType" xml:space="preserve">
     <value>Vehicle Type</value>

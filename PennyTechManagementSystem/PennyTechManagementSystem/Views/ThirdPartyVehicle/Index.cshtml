@@ -1,0 +1,83 @@
+﻿@model IEnumerable<PennyTechManagementSystem.Models.ThirdPartyVehicle>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table-custom table table-bordered table-responsive table-sm">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleOwnerName)
+            </th>
+            <th>
+                Vehicle Type
+            </th>
+            <th>
+                Vehicle Business Type
+            </th>
+            <th>
+                Vehice Company
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentInDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpenceMode)
+            </th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                @Html.HiddenFor(modelItem => item.VehicleCode)
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleOwnerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleTypeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleBusinessTypeName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleCompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RentAmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RentInDate)
+                </td>
+                
+                    @if (item.ExpenceMode == false) { 
+                        <td>Reciever</td>
+                    } else {
+                        <td>Owner</td>
+                    }                        
+                    @*@Html.DisplayFor(modelItem => item.ExpenceMode)*@
+                
+                <td>
+                    <a href="@Url.Action("Edit", "ThirdPartyVehicle", new { id=item.VehicleCode })"><i class="fa fa-pencil"></i></a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Delete", "ThirdPartyVehicle", new { id=item.VehicleCode })"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

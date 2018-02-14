@@ -12,7 +12,11 @@ AS
 
 BEGIN
 
-	IF NOT EXISTS (SELECT ExpenceName FROM ExpenceName WHERE ExpenceName= @ExpenceName AND ExpenceCategoryID = @ExpenceCategoryID)
+	IF EXISTS (SELECT ExpenceName FROM ExpenceName WHERE ExpenceName= @ExpenceName AND ExpenceCategoryID = @ExpenceCategoryID)
+	BEGIN
+		RAISERROR ('You have another Expence Name similar to this', 16, 1)		
+	END
+	ELSE
 	BEGIN
 		UPDATE ExpenceName
 		SET 
@@ -20,10 +24,6 @@ BEGIN
 			ExpenceCategoryID = @ExpenceCategoryID
 		WHERE 
 			ExpenceNameID = @ExpenceNameID
-	END
-	ELSE
-	BEGIN
-		RAISERROR ('You have another Expence Name similar to this', 16, 1)
 	END
 
 END

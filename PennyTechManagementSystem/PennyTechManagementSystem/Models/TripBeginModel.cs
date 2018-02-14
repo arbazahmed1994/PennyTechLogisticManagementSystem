@@ -60,7 +60,7 @@ namespace PennyTechManagementSystem.Models
         private DateTime _referenceDate = DateTime.Now.Date;
         [Required]
         [Display(Name = "ReferenceDate", ResourceType = typeof(NameHandling))]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime ReferenceDate
         {
             get { return _referenceDate.Date; }

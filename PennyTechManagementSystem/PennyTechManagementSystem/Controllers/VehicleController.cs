@@ -52,5 +52,73 @@ namespace PennyTechManagementSystem.Controllers
             }
         }
 
+        public ActionResult ViewDetail(string id)
+        {
+            ViewBag.Head = "Manage Vehicle";
+            ViewBag.Form = "Vehicles Detail";
+
+            VehicleModel model = _rep.Get(id);
+
+            return View(model);
+        }
+
+        public ActionResult Edit(string id)
+        {
+            ViewBag.Head = "Manage Vehicle";
+            ViewBag.Form = "Vehicle Updation";
+
+            VehicleModel model = new VehicleModel();
+
+            try
+            {
+                model = _rep.Get(id);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Edit(VehicleModel model)
+        {
+            ViewBag.Head = "Manage Vehicle";
+            ViewBag.Form = "Vehicle Updation";
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _rep.Edit(model);
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+
+        public ActionResult Delete(string id)
+        {
+
+            if (_rep.Delete(id) == 1)
+            {
+                TempData["SuccessMessage"] = NameHandling.SuccessMessageDelete;
+            }
+            else
+            {
+                TempData["ErrorMessage"] = NameHandling.ErrorMessage;
+            }
+
+            return RedirectToAction("Index");
+        }
     }
 }

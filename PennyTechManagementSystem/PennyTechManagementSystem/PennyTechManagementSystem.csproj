@@ -125,6 +125,7 @@
     <Compile Include="Controllers\ExpenceNameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
+    <Compile Include="Controllers\ThirdPartyVehicleController.cs" />
     <Compile Include="Controllers\TripBeginController.cs" />
     <Compile Include="Controllers\TripEndController.cs" />
     <Compile Include="Controllers\VehicleBusinessTypeController.cs" />
@@ -149,7 +150,6 @@
     <Compile Include="Models\EmployeeUser.cs" />
     <Compile Include="Models\ExpenceCategoryModel.cs" />
     <Compile Include="Models\ExpenceNameModel.cs" />
-    <Compile Include="Models\Fleet.cs" />
     <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\MaritalStatu.cs" />
@@ -180,6 +180,7 @@
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\NavbarRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\ThirdPartyVehicleRepository.cs" />
     <Compile Include="Repository\TripBeginRepository.cs" />
     <Compile Include="Repository\TripEndRepository.cs" />
     <Compile Include="Repository\VehicleBusinessTypeRepository.cs" />
@@ -476,6 +477,9 @@
     <Content Include="Views\TripEnd\IndexEndedList.cshtml" />
     <Content Include="Views\Vehicle\Create.cshtml" />
     <Content Include="Views\Vehicle\Index.cshtml" />
+    <Content Include="Views\Vehicle\ViewDetail.cshtml" />
+    <Content Include="Views\Vehicle\Edit.cshtml" />
+    <Content Include="Views\ThirdPartyVehicle\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

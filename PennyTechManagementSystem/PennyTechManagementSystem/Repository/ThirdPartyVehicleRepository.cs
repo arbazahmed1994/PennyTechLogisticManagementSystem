@@ -8,13 +8,13 @@ using System.Web;
 
 namespace PennyTechManagementSystem.Repository
 {
-    public class VehicleRepository : Repository<VehicleModel>
+    public class ThirdPartyVehicleRepository : Repository<ThirdPartyVehicle>
     {
         Database db = Connection.GetDatabase();
 
-        public override string GetSPName { get { return "GetVehicle"; } }
+        public override string GetSPName { get { return "GetThirdPartyVehicle"; } }
         public override string GetByIDSPName { get { return string.Empty; } }
-        public override string GetByStringSPName { get { return "GetVehicleByID"; } }
+        public override string GetByStringSPName { get { return "GetThirdPartyVehicleByID"; } }
         public override string DeleteSPName { get { return ""; } }
         public override string DeleteByStringSPName { get { return "DeleteVehicle"; } }
         public override string CreateSPName { get { return "CreateVehicle"; } }

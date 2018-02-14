@@ -10,7 +10,10 @@ AS
 
 BEGIN
 
-	DELETE FROM Fleet
-	WHERE VehicleCode = @VehicleCode
+	UPDATE Fleet SET
+		IsDeleted = 1,
+		DeletedDate = GETDATE()
+	WHERE
+		VehicleCode = @VehicleCode
 
 END

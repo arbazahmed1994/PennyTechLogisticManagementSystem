@@ -13,18 +13,24 @@ BEGIN
 	SELECT
 		VehicleCode,
 		VehicleNumber,
-		VehicleTypeID,
-		VehicleBusinessTypeID,
-		VehicleCompanyID,
+		VT.VehicleTypeName,
+		F.VehicleTypeID,
+		VBT.VehicleBusinessTypeName,
+		F.VehicleBusinessTypeID,
+		VC.VehicleCompanyName,
+		F.VehicleCompanyID,
 		VehicleLenght,
 		ModelYear,
-		CountryID,
+		C.CountryName,
+		F.CountryID,
 		NumberOfWheels,
 		ChasisNumber,
 		EngineNumber,
 		EngineHorsePower,
-		StatusID,
-		ColorID,
+		S.StatusName,
+		F.StatusID,
+		Color.ColorName,
+		F.ColorID,
 		PurchaseDate,
 		PurchaseFrom,
 		ManufactureDate,
@@ -32,7 +38,13 @@ BEGIN
 		VehicleModelName,
 		VehicleEntryDate
 	FROM
-		Fleet
+		Fleet AS F
+		INNER JOIN VehicleType AS VT ON VT.VehicleTypeID = F.VehicleTypeID
+		INNER JOIN VehicleBusinessType AS VBT ON VBT.VehicleBusinessTypeID = F.VehicleBusinessTypeID
+		INNER JOIN VehicleCompany AS VC ON VC.VehicleCompanyID = F.VehicleCompanyID
+		INNER JOIN Countries AS C ON C.CountryID = F.CountryID
+		INNER JOIN Colors AS Color ON Color.ColorID = F.ColorID
+		INNER JOIN Status AS S ON S.StatusID = F.StatusID
 	WHERE
 		VehicleCode = @VehicleCode AND
 		IsDeleted = 0

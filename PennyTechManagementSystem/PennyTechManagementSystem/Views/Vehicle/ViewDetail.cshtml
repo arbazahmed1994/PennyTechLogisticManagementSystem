@@ -1,0 +1,161 @@
+﻿@model PennyTechManagementSystem.Models.VehicleModel
+
+@{
+    ViewBag.Title = "ViewDetail";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<div class="card" style="padding: 10px">
+<div class="row">
+
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+
+      
+        <div class="row">
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.VehicleNumber)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.VehicleNumber)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.ChasisNumber)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.ChasisNumber)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.EngineNumber)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.EngineNumber)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.VehicleLenght)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.VehicleLenght)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.CountryName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.CountryName)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.StatusName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.StatusName)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.VehicleTypeName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.VehicleTypeName)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.VehicleBusinessTypeName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.VehicleBusinessTypeName)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.VehicleCompanyName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.VehicleCompanyName)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.ColorName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.ColorName)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.ModelYear)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.ModelYear)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.NumberOfWheels)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.NumberOfWheels)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.EngineHorsePower)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.EngineHorsePower)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.PurchaseDate)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.PurchaseDate)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.PurchaseFrom)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.PurchaseFrom)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.ManufactureDate)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.ManufactureDate)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.ManufacturedFrom)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.ManufacturedFrom)
+            </div>
+
+            <div class="display-label">
+                 @Html.DisplayNameFor(model => model.VehicleModelName)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.VehicleModelName)
+            </div>
+       
+    </div>
+
+
+    </div>
+    <div class="col-sm-3"></div>
+
+</div>
+</div>
+
+
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<script>
+    $('.display-label').addClass('col-sm-6')
+    $('.display-field').addClass('col-sm-6')
+</script>

@@ -33,18 +33,24 @@ namespace PennyTechManagementSystem.Controllers
         {
             ViewBag.Head = "Manage Begin Trips";
             ViewBag.Form = "Begin Trips List";
-
-            if (ModelState.IsValid)
+            if (model.ReferenceDate <= DateTime.Now.Date)
             {
-                try
+                if (ModelState.IsValid)
                 {
-                    _rep.Create(model);
-                    return RedirectToAction("Index");
-                }
-                catch (Exception)
-                {
+                    try
+                    {
+                        _rep.Create(model);
+                        return RedirectToAction("Index");
+                    }
+                    catch (Exception)
+                    {
 
-                    throw;
+                        throw;
+                    }
+                }
+                else
+                {
+                    return View(model);
                 }
             }
             else
@@ -68,18 +74,24 @@ namespace PennyTechManagementSystem.Controllers
         {
             ViewBag.Head = "Manage Begin Trips";
             ViewBag.Form = "Begin Trips List";
-
-            if (ModelState.IsValid)
+            if (model.ReferenceDate <= DateTime.Now.Date)
             {
-                try
+                if (ModelState.IsValid)
                 {
-                    _rep.Edit(model);
-                    return RedirectToAction("Index");
-                }
-                catch (Exception)
-                {
+                    try
+                    {
+                        _rep.Edit(model);
+                        return RedirectToAction("Index");
+                    }
+                    catch (Exception)
+                    {
 
-                    throw;
+                        throw;
+                    }
+                }
+                else
+                {
+                    return View(model);
                 }
             }
             else

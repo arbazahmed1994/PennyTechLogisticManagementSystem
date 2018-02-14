@@ -57,7 +57,7 @@ namespace PennyTechManagementSystem.Controllers
             ViewBag.Form = "End Trips List";
 
             model.TripReferenceID = ProcedureNameHandling.TripReference;
-            if (model.EndDate >= DateTime.Now.Date)
+            if (model.EndDate <= DateTime.Now.Date)
             {
                 if (ModelState.IsValid)
                 {

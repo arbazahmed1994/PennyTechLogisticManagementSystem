@@ -8,6 +8,7 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
 <table class="table-custom-3 table table-bordered table-sm">
     <thead>
         <tr>
@@ -76,7 +77,7 @@
                     <a href="@Url.Action("Edit", "Vehicle", new { id=item.VehicleCode })"><i class="fa fa-pencil"></i></a>
                 </td>
                 <td>
-                    <a href="@Url.Action("Detail", "Vehicle", new { id=item.VehicleCode })"><i class="fa fa-document"></i></a>
+                    <a href="@Url.Action("ViewDetail", "Vehicle", new { id=item.VehicleCode })"><i class="fa fa-sticky-note"></i></a>
                 </td>
                 <td>
                     <a href="@Url.Action("Delete", "Vehicle", new { id=item.VehicleCode })" onclick="return confirm('Do you really want to delete this item?')"><i class="fa fa-trash"></i></a>
