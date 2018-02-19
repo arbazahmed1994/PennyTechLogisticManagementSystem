@@ -43,7 +43,7 @@ namespace PennyTechManagementSystem.Models
             DriverList = Drivers.ToDriverSelectListItems(DriverCode);
 
             VehicleRepository _vehicleRep = new VehicleRepository();
-            Vehicles = _vehicleRep.Get();
+            Vehicles = _vehicleRep.GetAllVehicle();
             VehicleList = Vehicles.ToVehicleSelectListItems(VehicleCode);
         }
 

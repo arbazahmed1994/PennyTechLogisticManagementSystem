@@ -56,6 +56,7 @@
                             <div class="form-group">
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.EndDate)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.EndDate,"{0:d}")
@@ -71,9 +72,9 @@
                             <table class="table table-bordered table-sm">
                             <thead style="background:whitesmoke">
                                 <tr>
-                                    <th>Expence Name</th>
-                                    <th>Amount</th>
-                                    <th>Comments</th>
+                                    <th>Expence Name (*)</th>
+                                    <th>Amount (*)</th>
+                                    <th>Comments (*)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -94,6 +95,7 @@
                                         </td>
                                         <td>
                                             @Html.DisplayFor(model => model.TripExpenceList[i].Comments)
+                                            <a href="@Url.Action("DeleteItem", "TripEnd", new { id = i , mod = Model})">Delete</a>
                                         </td>
                                     </tr>
                                 }
@@ -106,10 +108,6 @@
                                     </td>
                                     <td>
                                         @Html.TextBox("CommentsValue", null)
-                                        @*@Html.ActionLink("Add Row", "AddRow")*@
-                                        @*<button class="btn-upgrade" type ="submit" value ="Upgrade" onclick="addExpence(@Model)">
-                                            <i class="fa fa-upload"></i>
-                                        </button>*@
                                         <input type="submit" class="btn btn-sm btn-primary" value="Add Row"  name="action:AddRow" />
                                     </td>
                                 </tr>
@@ -129,6 +127,7 @@
                                             <div class="form-group">
                                                 <div class="editor-label">
                                                     @Html.LabelFor(model => model.FuelLitre)
+                                                    <span>*</span>
                                                 </div>
                                                 <div class="editor-field">
                                                     @Html.EditorFor(model => model.FuelLitre)
@@ -138,6 +137,7 @@
                                             <div class="form-group">
                                                 <div class="editor-label">
                                                     @Html.LabelFor(model => model.FuelRate)
+                                                    <span>*</span>
                                                 </div>
                                                 <div class="editor-field">
                                                     @Html.EditorFor(model => model.FuelRate)
@@ -147,6 +147,7 @@
                                             <div class="form-group">
                                                 <div class="editor-label">
                                                     @Html.LabelFor(model => model.FuelAmount)
+                                                    <span>*</span>
                                                 </div>
                                                 <div class="editor-field">
                                                     @Html.EditorFor(model => model.FuelAmount)

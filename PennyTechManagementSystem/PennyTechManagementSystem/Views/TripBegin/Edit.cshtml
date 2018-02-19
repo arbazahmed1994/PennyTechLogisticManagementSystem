@@ -18,12 +18,13 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-    @Html.HiddenFor(model => model.ReferenceID)
+                        @Html.HiddenFor(model => model.ReferenceID)
                     
                         <div class="col-sm-12">
                             <div class="form-group">       
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.ReferenceDate)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.ReferenceDate,"{0:d}")
@@ -33,6 +34,7 @@
                             <div class="form-group">       
                                    <div class="editor-label">
                                     @Html.LabelFor(model => model.OrderCompanyName)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.OrderCompanyName)
@@ -42,33 +44,43 @@
                             <div class="form-group">       
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.VendorName)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.VendorName)
                                     @Html.ValidationMessageFor(model => model.VendorName)
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-sm-6">
                             <div class="form-group">
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.SourceLocation)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.SourceLocation)
                                     @Html.ValidationMessageFor(model => model.SourceLocation)
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-sm-6">
                             <div class="form-group">
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.DestinationLocation)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.DestinationLocation)
                                     @Html.ValidationMessageFor(model => model.DestinationLocation)
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-sm-12">
                             <div class="form-group">
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.ShipmentName)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.ShipmentName)
@@ -84,6 +96,7 @@
                             <div class="form-group">
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.VehicleCode)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.DropDownListFor(model => model.VehicleCode, Model.VehicleList)
@@ -93,6 +106,7 @@
                             <div class="form-group">
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.DriverCode)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.DropDownListFor(model => model.DriverCode, Model.DriverList)
@@ -104,6 +118,7 @@
                             <div class="form-group">
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.OrderPersonName)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.OrderPersonName)
@@ -128,6 +143,7 @@
                             <div class="form-group">
                                 <div class="editor-label">
                                     @Html.LabelFor(model => model.StartingMeterReading)
+                                    <span>*</span>
                                 </div>
                                 <div class="editor-field">
                                     @Html.EditorFor(model => model.StartingMeterReading)

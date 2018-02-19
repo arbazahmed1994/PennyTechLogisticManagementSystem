@@ -1,0 +1,122 @@
+﻿@model PennyTechManagementSystem.Models.ThirdPartyVehicle
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+ 
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.VehicleOwnerName)
+                                    <span>*</span>
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.VehicleOwnerName)
+                                    @Html.ValidationMessageFor(model => model.VehicleOwnerName)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.VehicleNumber)
+                                    <span>*</span>
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.VehicleNumber)
+                                    @Html.ValidationMessageFor(model => model.VehicleNumber)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    Vehicle Type
+                                    <span>*</span>
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.VehicleType, Model.vehicletypelist)
+                                    @Html.ValidationMessageFor(model => model.VehicleType)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    Vehicle Business Type
+                                    <span>*</span>
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.VehicleBusinessType, Model.vehiclebusinesstypelist)
+                                    @Html.ValidationMessageFor(model => model.VehicleBusinessType)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    Vehicle Company
+                                    <span>*</span>
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.VehicleCompany, Model.vehiclecompanylist)
+                                    @Html.ValidationMessageFor(model => model.VehicleCompany)
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.RentAmount)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.RentAmount)
+                                    @Html.ValidationMessageFor(model => model.RentAmount)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.ExpenceMode)
+                                    <span>*</span>
+                            </div>
+                            <div class="editor-field-r">
+                                <span>@Html.RadioButtonFor(model => model.ExpenceMode,true) Owners</span>
+                                <span>@Html.RadioButtonFor(model => model.ExpenceMode,false) Receiver</span>
+                            </div>
+                        </div>
+                        <p>
+                            <input type="submit" class="btn btn-csm btn-primary" value="Create" />
+                        </p>
+                    </div>
+                    <div>
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>                    
+                </div>                           
+            </div>
+        </div>
+    </div>
+            
+}

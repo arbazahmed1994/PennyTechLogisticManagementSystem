@@ -13,6 +13,7 @@ namespace PennyTechManagementSystem.Controllers
 {
     public class TripEndController : Controller
     {
+        private TripEndModel ContinueModel = new TripEndModel();
         private TripEndRepository _rep = new TripEndRepository();
         private TripBeginRepository _repBegin = new TripBeginRepository();
 
@@ -38,7 +39,7 @@ namespace PennyTechManagementSystem.Controllers
         public ActionResult Create( int id )
         {
             ViewBag.Head = "Manage End Trip";
-            ViewBag.Form = "End Trips List";
+            ViewBag.Form = "End Trips Registration";
 
             TripEndModel model = new TripEndModel();
             
@@ -54,7 +55,7 @@ namespace PennyTechManagementSystem.Controllers
         public ActionResult Create(TripEndModel model)
         {
             ViewBag.Head = "Manage End Trip";
-            ViewBag.Form = "End Trips List";
+            ViewBag.Form = "End Trips Registration";
 
             model.TripReferenceID = ProcedureNameHandling.TripReference;
             if (model.EndDate <= DateTime.Now.Date)
@@ -86,7 +87,7 @@ namespace PennyTechManagementSystem.Controllers
         public JsonResult Search(string term)
         {
             ViewBag.Head = "Manage End Trip";
-            ViewBag.Form = "End Trips List";
+            ViewBag.Form = "End Trips Registration";
 
             List<string> filterList = ProcedureNameHandling.list.Where(x => x.ExpenceName.ToUpper().Contains(term.ToUpper())).Select(y => y.ExpenceName).ToList();
 
@@ -98,7 +99,7 @@ namespace PennyTechManagementSystem.Controllers
         public ActionResult AddRow(TripEndModel oldModel , string ExpenceNameValue, decimal AmountValue, string CommentsValue)
         {
             ViewBag.Head = "Manage End Trip";
-            ViewBag.Form = "End Trips List";
+            ViewBag.Form = "End Trips Registration";
             TripExpenceViewModel model = new TripExpenceViewModel();
             model.ExpenceName = ExpenceNameValue;
             model.Amount = AmountValue;
@@ -112,6 +113,15 @@ namespace PennyTechManagementSystem.Controllers
             return View("Create", oldModel);
         }
 
+        public ActionResult DeleteItem( int id , TripEndModel mod )
+        {
+            ViewBag.Head = "Manage End Trip";
+            ViewBag.Form = "End Trips Registration";
+
+            mod.TripExpenceList.RemoveAt(id);
+
+            return View("Create", mod);
+        }
         
     }
 }

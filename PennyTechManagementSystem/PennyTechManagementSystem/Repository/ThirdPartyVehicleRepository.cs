@@ -16,9 +16,9 @@ namespace PennyTechManagementSystem.Repository
         public override string GetByIDSPName { get { return string.Empty; } }
         public override string GetByStringSPName { get { return "GetThirdPartyVehicleByID"; } }
         public override string DeleteSPName { get { return ""; } }
-        public override string DeleteByStringSPName { get { return "DeleteVehicle"; } }
-        public override string CreateSPName { get { return "CreateVehicle"; } }
-        public override string EditSPName { get { return "UpdateVehicle"; } }
+        public override string DeleteByStringSPName { get { return "DeleteThirdPartyVehicle"; } }
+        public override string CreateSPName { get { return "CreateThirdPartyVehicle"; } }
+        public override string EditSPName { get { return "UpdateThirdPartyVehicle"; } }
         public override string GetByModelSPName { get { return string.Empty; } }
 
     }

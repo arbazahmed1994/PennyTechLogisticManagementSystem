@@ -223,6 +223,15 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An Error occured while executing your request.
+        /// </summary>
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your reques can not be completed.
         /// </summary>
         public static string ErrorMessage {
@@ -480,6 +489,15 @@ namespace PennyTechManagementSystem {
         public static string SuccessMessageDelete {
             get {
                 return ResourceManager.GetString("SuccessMessageDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Saved Successfully.
+        /// </summary>
+        public static string SuccessSave {
+            get {
+                return ResourceManager.GetString("SuccessSave", resourceCulture);
             }
         }
         

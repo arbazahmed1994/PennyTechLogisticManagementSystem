@@ -40,10 +40,12 @@ namespace PennyTechManagementSystem.Controllers
                 {
                     _rep.Create(model);
                     return RedirectToAction("Index");
+                    TempData["Success"] = NameHandling.SuccessSave;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    throw;
+                    TempData["Error"] = NameHandling.Error;
+                    return View();
                 }
             }
             else

@@ -37,6 +37,20 @@ namespace PennyTechManagementSystem.Models
                           });
         }
 
+        public static IEnumerable<SelectListItem> ToVehicleNumberOnlySelectListItems(
+            this IEnumerable<VehicleModel> VehicleNumber, string selectedCode)
+        {
+            return
+                VehicleNumber.OrderBy(vehicle => vehicle.VehicleNumber)
+                      .Select(vehicle =>
+                          new SelectListItem
+                          {
+                              Selected = (vehicle.VehicleNumber == selectedCode),
+                              Text = vehicle.VehicleNumber,
+                              Value = vehicle.VehicleNumber.ToString()
+                          });
+        }
+
         public static IEnumerable<SelectListItem> ToCountrySelectListItems(
             this IEnumerable<BasicModel> Country, int selectedId)
         {

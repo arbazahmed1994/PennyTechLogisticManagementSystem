@@ -3,6 +3,7 @@ using PennyTechManagementSystem.Common;
 using PennyTechManagementSystem.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -21,5 +22,11 @@ namespace PennyTechManagementSystem.Repository
         public override string EditSPName { get { return "UpdateVehicle"; } }
         public override string GetByModelSPName { get { return string.Empty; } }
 
+
+        public IEnumerable<VehicleModel> GetAllVehicle()
+        {
+            DataSet ds = db.ExecuteDataSet("GetAllVehicle");
+            return ds.Tables[0].ConvertToList<VehicleModel>();
+        }
     }
 }

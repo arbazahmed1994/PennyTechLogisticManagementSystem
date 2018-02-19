@@ -1,4 +1,6 @@
 ﻿using PennyTechManagementSystem.Constant;
+using PennyTechManagementSystem.Models;
+using PennyTechManagementSystem.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +11,21 @@ namespace PennyTechManagementSystem.Controllers
 {
     public class HomeController : Controller
     {
-        //
-        // GET: /Home/
+
+        private HomeRepository _rep = new HomeRepository();
+
         [HttpGet]
         public ActionResult Index()
         {
+            HomeModel model = new HomeModel();
+            model = _rep.GetVehicleData();
+            ViewBag.TotalVehicle = model.VehicleCountPrivate + model.VehicleCountOther;
+            ViewBag.IdleVehicle = model.VehicleIdlePrivate + model.VehicleIdleOther;
+            ViewBag.DriverCount = model.DriverCount;
+            ViewBag.DriverIdle = model.DriverIdle;
+            ViewBag.EmployeeCount = model.EmployeeCount;
+            ViewBag.EmployeePresent = model.EmployeePresent;
+
             return View();
         }
         public ActionResult Logistic(int id)

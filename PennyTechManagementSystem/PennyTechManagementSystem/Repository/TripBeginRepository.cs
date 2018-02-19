@@ -20,8 +20,8 @@ namespace PennyTechManagementSystem.Repository
         public override string GetByStringSPName { get { return string.Empty; } }
         public override string DeleteSPName { get { return string.Empty; } }
         public override string DeleteByStringSPName { get { return string.Empty; } }
-        public override string CreateSPName { get { return "CreateTripEnd"; } }
-        public override string EditSPName { get { return "UpdateDriver"; } }
+        public override string CreateSPName { get { return "CreateTripBegin"; } }
+        public override string EditSPName { get { return "UpdateTripBegin"; } }
         public override string GetByModelSPName { get { return string.Empty; } }
 
         public IEnumerable<TripBeginViewModel> GetList(int id)

@@ -12,7 +12,7 @@ namespace PennyTechManagementSystem.Models
     {
 
         //vehicletype
-        public IEnumerable<VehicleType> vehicletype { get; set; }
+        public IEnumerable<VehicleType> vehicletypeVar { get; set; }
         public IEnumerable<SelectListItem> vehicletypelist { get; set; }
         private int _vehicletypeid = 0;
         [Required]
@@ -24,7 +24,7 @@ namespace PennyTechManagementSystem.Models
         }
 
         //vehiclebusinesstype
-        public IEnumerable<VehicleBusinessType> vehiclebusinesstype { get; set; }
+        public IEnumerable<VehicleBusinessType> vehiclebusinesstypeVar { get; set; }
         public IEnumerable<SelectListItem> vehiclebusinesstypelist { get; set; }
         private int _vehiclebusunesstype = 0;
         [Required]
@@ -36,7 +36,7 @@ namespace PennyTechManagementSystem.Models
         }
 
         //vehiclecompany
-        public IEnumerable<VehicleCompany> vehiclecompany { get; set; }
+        public IEnumerable<VehicleCompany> vehiclecompanyVar { get; set; }
         public IEnumerable<SelectListItem> vehiclecompanylist { get; set; }
         private int _vehiclecompanyid = 0;
         [Required]
@@ -52,16 +52,16 @@ namespace PennyTechManagementSystem.Models
         public ThirdPartyVehicle()
         {
             VehicleTypeRepository _vehicletyperep = new VehicleTypeRepository();
-            vehicletype = _vehicletyperep.Get();
-            vehicletypelist = vehicletype.ToVehicleTypeSelectListItems(VehicleType);
+            vehicletypeVar = _vehicletyperep.Get();
+            vehicletypelist = vehicletypeVar.ToVehicleTypeSelectListItems(VehicleType);
 
             VehicleBusinessTypeRepository _vehiclebusinesstyperep = new VehicleBusinessTypeRepository();
-            vehiclebusinesstype = _vehiclebusinesstyperep.Get();
-            vehiclebusinesstypelist = vehiclebusinesstype.ToVehicleBusinessTypeSelectListItems(VehicleBusinessType);
+            vehiclebusinesstypeVar = _vehiclebusinesstyperep.Get();
+            vehiclebusinesstypelist = vehiclebusinesstypeVar.ToVehicleBusinessTypeSelectListItems(VehicleBusinessType);
 
             VehicleCompanyRepository _vehiclecompanyrep = new VehicleCompanyRepository();
-            vehiclecompany = _vehiclecompanyrep.Get();
-            vehiclecompanylist = vehiclecompany.ToVehicleCompanySelectListItems(VehicleCompany);
+            vehiclecompanyVar = _vehiclecompanyrep.Get();
+            vehiclecompanylist = vehiclecompanyVar.ToVehicleCompanySelectListItems(VehicleCompany);
          }
 
 
@@ -83,6 +83,8 @@ namespace PennyTechManagementSystem.Models
         [Display(Name = "RentAmount", ResourceType = typeof(NameHandling))]
         public double RentAmount { get; set; }
 
+        [Display(Name = "Returned", ResourceType = typeof(NameHandling))]
+        public bool Returned { get; set; }
 
         // REQUIRED --
 
@@ -108,10 +110,6 @@ namespace PennyTechManagementSystem.Models
         [Required]
         [Display(Name = "ExpenceMode", ResourceType = typeof(NameHandling))]
         public bool ExpenceMode { get; set; }
-
-        [Required]
-        [Display(Name = "Returned", ResourceType = typeof(NameHandling))]
-        public bool Returned { get; set; }
-
+        
     }
 }

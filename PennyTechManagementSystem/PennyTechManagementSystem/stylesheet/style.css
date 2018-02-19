@@ -15,6 +15,37 @@ body {
     width: 36px;
 }
 
+.custom-alert {
+    height: 50px;
+    width:30rem;
+    min-width: 30rem;
+    max-width: 60rem;
+    background: white;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 8vh;
+    padding-left: 100px;
+    box-shadow: 0px 0px 10px 0px grey;
+}
+    .custom-alert > .logo {
+        height: 100%;
+        width: 85px;
+        background: #dc4b03;
+        display: inline-block;
+        position:absolute;
+        left: 0;
+    }
+    .custom-alert > .text {
+        color: #dc4b03;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: century gothic;
+        padding-top: 15px;
+    }
+
 p > a {
     font-weight: 600;
     font-size: 15px;
@@ -184,11 +215,11 @@ ol {
     border-radius: 0;
 }
 .editor-field-r {
-    padding: 10px 0;
-    margin-top: 6px;
+    padding: 0 0 20px 0px;
 }
 .editor-field-r > span {
-    margin: 0 10px;
+    margin: 0px 20px 0 0px;
+    font-weight: bold;
 }
     .editor-field-r > span > input[type=radio] {
         height: 18px;

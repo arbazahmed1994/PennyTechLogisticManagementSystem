@@ -124,6 +124,7 @@
     <Compile Include="Controllers\ExpenceCategoryController.cs" />
     <Compile Include="Controllers\ExpenceNameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NavbarController.cs" />
     <Compile Include="Controllers\ThirdPartyVehicleController.cs" />
     <Compile Include="Controllers\TripBeginController.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Models\ExpenceNameModel.cs" />
     <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MaritalStatu.cs" />
     <Compile Include="Models\ModelExtentions.cs" />
     <Compile Include="Models\Navbar.cs" />
@@ -177,7 +179,9 @@
     <Compile Include="Repository\DriverRepository.cs" />
     <Compile Include="Repository\ExpenceCategoryRepository.cs" />
     <Compile Include="Repository\ExpenceNameRepository.cs" />
+    <Compile Include="Repository\HomeRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\LoginRepository.cs" />
     <Compile Include="Repository\NavbarRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
     <Compile Include="Repository\ThirdPartyVehicleRepository.cs" />
@@ -480,6 +484,8 @@
     <Content Include="Views\Vehicle\ViewDetail.cshtml" />
     <Content Include="Views\Vehicle\Edit.cshtml" />
     <Content Include="Views\ThirdPartyVehicle\Index.cshtml" />
+    <Content Include="Views\ThirdPartyVehicle\Create.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

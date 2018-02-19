@@ -22,5 +22,51 @@ namespace PennyTechManagementSystem.Controllers
             return View(model);
         }
 
+        public ActionResult Create()
+        {
+            ViewBag.Head = "Manage Third Party Vehicle";
+            ViewBag.Form = "Third Party Vehicle Registration";
+
+            return View(new ThirdPartyVehicle());
+        }
+        [HttpPost]
+        public ActionResult Create(ThirdPartyVehicle model)
+        {
+            ViewBag.Head = "Manage Third Party Vehicle";
+            ViewBag.Form = "Third Party Vehicle Registration";
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _rep.Create(model);
+                    return RedirectToAction("Index");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+            else
+            {
+                return View(model);
+            }
+           
+        }
+
+        public ActionResult Delete(string id)
+        {
+            if (_rep.Delete(id) == 1)
+            {
+                TempData["Success"] = NameHandling.SuccessMessageDelete;
+            }
+            else
+            {
+                TempData["Error"] = NameHandling.ErrorMessage;
+            }
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
