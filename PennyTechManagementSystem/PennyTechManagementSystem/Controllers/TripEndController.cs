@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace PennyTechManagementSystem.Controllers
 {
+    [SessionTimeout]
     public class TripEndController : Controller
     {
         private TripEndModel ContinueModel = new TripEndModel();

@@ -8,7 +8,7 @@ namespace PennyTechManagementSystem.Models
     public class LoginModel : BaseModel<LoginModel>
     {
 
-        public string UserCode { get; set; }
+        public int UserCode { get; set; }
 
         public string FullName { get; set; }
 

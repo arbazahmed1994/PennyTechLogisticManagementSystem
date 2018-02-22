@@ -15,7 +15,7 @@ BEGIN
 
 	IF EXISTS ( SELECT UserCode FROM EmployeeUser WHERE Username = @Username AND Password = @Password )
 	BEGIN
-		DECLARE @Code VARCHAR(4) = ( SELECT UserCode FROM EmployeeUser 
+		DECLARE @Code AS INT = ( SELECT UserCode FROM EmployeeUser 
 										WHERE Username = @Username AND Password = @Password )
 		IF NOT EXISTS ( SELECT UserID FROM OnlineUser WHERE Deactive = 0 AND UserID = @Code )
 		BEGIN

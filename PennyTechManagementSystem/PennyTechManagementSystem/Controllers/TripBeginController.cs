@@ -1,4 +1,5 @@
-﻿using PennyTechManagementSystem.Models;
+﻿using PennyTechManagementSystem.Common;
+using PennyTechManagementSystem.Models;
 using PennyTechManagementSystem.Repository;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace PennyTechManagementSystem.Controllers
 {
+    [SessionTimeout]
     public class TripBeginController : Controller
     {
         private TripBeginRepository _rep = new TripBeginRepository();
@@ -98,6 +100,17 @@ namespace PennyTechManagementSystem.Controllers
             {
                 return View(model);
             }
+        }
+
+        public ActionResult Detail(int id)
+        {
+            ViewBag.Head = "Manage Begin Trips";
+            ViewBag.Form = "Begin Trips Detail";
+
+            TripBeginModel model = new TripBeginModel();
+            model = _rep.Get(id);
+
+            return View(model);
         }
 
         public ActionResult Delete(int id)

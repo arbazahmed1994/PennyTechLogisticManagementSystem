@@ -31,34 +31,33 @@ AS
 
 BEGIN
 
-	INSERT INTO [dbo].[EmployeeUser]
-		([UserCode]
-		,[FullName]
-		,[FatherName]
-		,[IdentityCardNumber]
-		,[FatherIdentityCardNumber]
-		,[DateOfBirth]
-		,[MaritalStatusID]
-		,[GenderID]
-		,[Phone]
-		,[Mobile]
-		,[Address]
-		,[CityID]
-		,[Nationality]
-		,[ReligionID]
-		,[Salary]
-		,[EducationID]
-		,[Experiance]
-		,[DepartmentCode]
-		,[DesignationID]
-		,[EOBINumber]
-		,[NTSNumber]
-		,[Username]
-		,[Password]
-		,[IsDeleted]
-		,[IsUpdated] )
-	VALUES
-		(( SELECT RIGHT('0000'+CAST(ISNULL(MAX(CONVERT(int,UserCode)),0)+1 AS VARCHAR),4) FROM EmployeeUser ),
+	INSERT INTO EmployeeUser (
+		FullName,
+		FatherName,
+		IdentityCardNumber,
+		FatherIdentityCardNumber,
+		DateOfBirth,
+		MaritalStatusID,
+		GenderID,
+		Phone,
+		Mobile,
+		Address,
+		CityID,
+		Nationality,
+		ReligionID,
+		Salary,
+		EducationID,
+		Experiance,
+		DepartmentCode,
+		DesignationID,
+		EOBINumber,
+		NTSNumber,
+		Username,
+		Password,
+		IsDeleted,
+		IsUpdated )
+	VALUES (
+		--(( SELECT RIGHT('0000'+CAST(ISNULL(MAX(CONVERT(int,UserCode)),0)+1 AS VARCHAR),4) FROM EmployeeUser ),
 		@FullName ,
 		@FatherName ,
 		@IdentityCardNumber ,

@@ -117,8 +117,10 @@
     <Compile Include="Common\ExtendidAuthorizeAttribute.cs" />
     <Compile Include="Common\Extensions.cs" />
     <Compile Include="Common\MultipleButtonAttribute.cs" />
+    <Compile Include="Common\SessionTimeoutAttribute.cs" />
     <Compile Include="Constant\NavbarConstantID.cs" />
     <Compile Include="Constant\ProcedureNameHandling.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\DesignationsController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\ExpenceCategoryController.cs" />
@@ -175,6 +177,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BasicRepository.cs" />
+    <Compile Include="Repository\DepartmentRepository.cs" />
     <Compile Include="Repository\DesignationsRepository.cs" />
     <Compile Include="Repository\DriverRepository.cs" />
     <Compile Include="Repository\ExpenceCategoryRepository.cs" />
@@ -486,6 +489,9 @@
     <Content Include="Views\ThirdPartyVehicle\Index.cshtml" />
     <Content Include="Views\ThirdPartyVehicle\Create.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\TripBegin\Detail.cshtml" />
+    <Content Include="Views\Department\Index.cshtml" />
+    <Content Include="Views\Department\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

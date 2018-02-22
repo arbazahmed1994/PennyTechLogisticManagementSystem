@@ -34,11 +34,11 @@ namespace PennyTechManagementSystem.Controllers
             LoginModel model = new LoginModel();
             try
             {
-                Session["Username"] = model.Username;
-                Session["FullName"] = model.FullName;
-                Session["UserCode"] = model.UserCode;
+                Session["Username"] = Username;
                 string SessionID = Session.SessionID;
                 model = _rep.Authenticate(Username, Password, MachineName, SessionID);
+                Session["FullName"] = model.FullName;
+                Session["UserCode"] = model.UserCode;
                 Session["Login"] = "Success";
 
                 return RedirectToAction("Index", "Home");

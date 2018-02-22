@@ -133,6 +133,51 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Department Email.
+        /// </summary>
+        public static string DepartmentEmail {
+            get {
+                return ResourceManager.GetString("DepartmentEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fax.
+        /// </summary>
+        public static string DepartmentFax {
+            get {
+                return ResourceManager.GetString("DepartmentFax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Department Name.
+        /// </summary>
+        public static string DepartmentName {
+            get {
+                return ResourceManager.GetString("DepartmentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Department Contact.
+        /// </summary>
+        public static string DepartmentNumber {
+            get {
+                return ResourceManager.GetString("DepartmentNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Department Short Name.
+        /// </summary>
+        public static string DepartmentShortName {
+            get {
+                return ResourceManager.GetString("DepartmentShortName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Designation Name.
         /// </summary>
         public static string DesignationName {

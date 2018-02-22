@@ -1,4 +1,5 @@
-﻿using PennyTechManagementSystem.Models;
+﻿using PennyTechManagementSystem.Common;
+using PennyTechManagementSystem.Models;
 using PennyTechManagementSystem.Repository;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Web.Mvc;
 
 namespace PennyTechManagementSystem.Controllers
 {
+    [SessionTimeout]
     public class VehicleController : Controller
     {
         private VehicleRepository _rep = new VehicleRepository();

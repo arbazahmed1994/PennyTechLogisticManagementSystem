@@ -1,4 +1,5 @@
-﻿using PennyTechManagementSystem.Constant;
+﻿using PennyTechManagementSystem.Common;
+using PennyTechManagementSystem.Constant;
 using PennyTechManagementSystem.Models;
 using PennyTechManagementSystem.Repository;
 using System;
@@ -9,6 +10,7 @@ using System.Web.Mvc;
 
 namespace PennyTechManagementSystem.Controllers
 {
+    [SessionTimeout]
     public class HomeController : Controller
     {
 

@@ -75,7 +75,7 @@
                     <a href="@Url.Action("Edit", "ThirdPartyVehicle", new { id=item.VehicleCode })"><i class="fa fa-pencil"></i></a>
                 </td>
                 <td>
-                    <a href="@Url.Action("Delete", "ThirdPartyVehicle", new { id=item.VehicleCode })"><i class="fa fa-trash"></i></a>
+                    <a href="@Url.Action("Delete", "ThirdPartyVehicle", new { id=item.VehicleCode })" onclick="return confirm('Do you really want to delete this item?')"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
         }

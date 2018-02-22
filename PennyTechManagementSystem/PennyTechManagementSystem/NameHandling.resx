@@ -141,6 +141,21 @@
   <data name="DailyPityCash" xml:space="preserve">
     <value>Daily Pity Cash</value>
   </data>
+  <data name="DepartmentEmail" xml:space="preserve">
+    <value>Department Email</value>
+  </data>
+  <data name="DepartmentFax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="DepartmentName" xml:space="preserve">
+    <value>Department Name</value>
+  </data>
+  <data name="DepartmentNumber" xml:space="preserve">
+    <value>Department Contact</value>
+  </data>
+  <data name="DepartmentShortName" xml:space="preserve">
+    <value>Department Short Name</value>
+  </data>
   <data name="DesignationName" xml:space="preserve">
     <value>Designation Name</value>
   </data>

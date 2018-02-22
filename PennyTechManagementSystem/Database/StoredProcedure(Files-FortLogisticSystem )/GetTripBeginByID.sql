@@ -10,6 +10,20 @@ AS
 
 BEGIN
 
+	CREATE TABLE #TEMP (
+		VehicleCode VARCHAR(5), 
+		VehicleNumber VARCHAR(20)
+	)
+
+	INSERT INTO #TEMP 
+	SELECT VehicleCode , VehicleNumber
+	FROM
+		Fleet
+	UNION ALL 
+	SELECT VehicleCode , VehicleNumber
+	FROM
+		ThirdPartyVehicle
+
 	SELECT 
 		ReferenceID
 		,ReferenceDate
@@ -34,7 +48,7 @@ BEGIN
 		,TB.IsDeleted
 	FROM 
 		TripBegin AS TB
-		INNER JOIN Fleet AS F ON F.VehicleCode = TB.VehicleCode
+		INNER JOIN #TEMP AS F ON F.VehicleCode = TB.VehicleCode
 		INNER JOIN Driver AS D ON D.DriverCode = TB.DriverCode
 	WHERE
 		ReferenceID = @ReferenceID

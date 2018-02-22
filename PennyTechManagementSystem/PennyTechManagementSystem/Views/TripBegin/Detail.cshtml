@@ -1,0 +1,131 @@
+﻿@model PennyTechManagementSystem.Models.TripBeginModel
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<div class="card" style="padding: 10px">
+    <div class="row">
+
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+
+      
+            <div class="row">
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.VehicleNumber)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VehicleNumber)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.DriverName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DriverName)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.ReferenceDate)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ReferenceDate)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.OrderCompanyName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.OrderCompanyName)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.VendorName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.VendorName)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.SourceLocation)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SourceLocation)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.DestinationLocation)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DestinationLocation)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.OrderPersonName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.OrderPersonName)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.OrderPersonContact)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.OrderPersonContact)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.ShipmentName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ShipmentName)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.StartingMeterReading)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.StartingMeterReading)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.EstimatedTime)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.EstimatedTime)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.BuiltyNumber)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.BuiltyNumber)
+                </div>
+
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.LoadedWeight)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.LoadedWeight)
+                </div>
+   
+            </div>
+
+
+        </div>
+        <div class="col-sm-2"></div>
+
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<script>
+    $('.display-label').addClass('col-sm-6')
+    $('.display-field').addClass('col-sm-6')
+</script>

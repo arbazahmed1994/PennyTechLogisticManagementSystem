@@ -9,7 +9,7 @@ CREATE PROCEDURE CreateTripBegin
 @VendorName VARCHAR(100),
 @SourceLocation NVARCHAR(300),
 @DestinationLocation NVARCHAR(300),
-@VehicleCode VARCHAR(4),
+@VehicleCode VARCHAR(5),
 @DriverCode VARCHAR(4),
 @OrderPersonName VARCHAR(50),
 @OrderPersonContact VARCHAR(50),

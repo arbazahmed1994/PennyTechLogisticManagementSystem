@@ -4,36 +4,30 @@ GO
 
 CREATE PROCEDURE CreateDepartment
 
-@xml XML
+@DepartmentName NVARCHAR(30),
+@DepartmentShortName NVARCHAR(10),
+@DepartmentEmail NVARCHAR(30),
+@DepartmentNumber VARCHAR(20),
+@DepartmentFax VARCHAR(30)
 
 AS
 
 BEGIN
 
- SELECT  Node.Data.value('(Name)[1]', 'NVARCHAR(30)') AS Name
-        , Node.Data.value('(ShortName)[1]', 'NVARCHAR(10)') AS ShortName
-        , Node.Data.value('(Email)[1]', 'VARCHAR(30)') AS Email
-        , Node.Data.value('(Contact)[1]', 'VARCHAR(20)') AS Contact
-        , Node.Data.value('(Fax)[1]', 'VARCHAR(30)') AS Fax
-    INTO #Dept
- FROM @xml.nodes('/Grid/Dept') Node(Data)
-
 BEGIN TRANSACTION
 BEGIN TRY
-	INSERT INTO [dbo].[Departments]
-		([DepartmentName]
-		,[DepartmentShortName]
-		,[DepartmentEmail]
-		,[DepartmentNumber]
-		,[DepartmentFax])
-	SELECT
-		Name ,
-		ShortName ,
-		Email ,
-		Contact ,
-		Fax 
-	FROM
-		#Dept
+	INSERT INTO Departments (
+		DepartmentName,
+		DepartmentShortName,
+		DepartmentEmail,
+		DepartmentNumber,
+		DepartmentFax )
+	VALUES (
+		@DepartmentName,
+		@DepartmentShortName,
+		@DepartmentEmail,
+		@DepartmentNumber,
+		@DepartmentFax )
 	COMMIT TRANSACTION
 END TRY
 BEGIN CATCH

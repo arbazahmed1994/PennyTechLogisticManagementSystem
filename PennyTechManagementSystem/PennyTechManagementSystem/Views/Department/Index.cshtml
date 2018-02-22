@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PennyTechManagementSystem.Models.Department>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table-custom table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentShortName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentFax)
+            </th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmentShortName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmentEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmentNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmentFax)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Department", new { id=item.DepartmentID })"><i class="fa fa-pencil"></i></a>
+                </td>
+                <td>
+                    <a href="@Url.Action("Delete", "Department", new { id=item.DepartmentID })" onclick="return confirm('Do you really want to delete this item?')"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

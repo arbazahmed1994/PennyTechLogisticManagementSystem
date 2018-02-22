@@ -1,0 +1,88 @@
+﻿@model PennyTechManagementSystem.Models.Department
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    
+                        <div class="col-sm-12">
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DepartmentName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DepartmentName)
+                                    @Html.ValidationMessageFor(model => model.DepartmentName)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DepartmentShortName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DepartmentShortName)
+                                    @Html.ValidationMessageFor(model => model.DepartmentShortName)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DepartmentEmail)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DepartmentEmail)
+                                    @Html.ValidationMessageFor(model => model.DepartmentEmail)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DepartmentNumber)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DepartmentNumber)
+                                    @Html.ValidationMessageFor(model => model.DepartmentNumber)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DepartmentFax)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DepartmentFax)
+                                    @Html.ValidationMessageFor(model => model.DepartmentFax)
+                                </div>
+                            </div>
+
+                            <p>
+                                <input type="submit" value="Create" />
+                            </p>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                           
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+}
