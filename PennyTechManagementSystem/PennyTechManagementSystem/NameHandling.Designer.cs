@@ -61,6 +61,15 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Amount.
         /// </summary>
         public static string Amount {
@@ -84,6 +93,15 @@ namespace PennyTechManagementSystem {
         public static string ChasisNumber {
             get {
                 return ResourceManager.GetString("ChasisNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string CityID {
+            get {
+                return ResourceManager.GetString("CityID", resourceCulture);
             }
         }
         
@@ -133,6 +151,24 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date Of Birth.
+        /// </summary>
+        public static string DateOfBirth {
+            get {
+                return ResourceManager.GetString("DateOfBirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Department.
+        /// </summary>
+        public static string DepartmentCode {
+            get {
+                return ResourceManager.GetString("DepartmentCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Department Email.
         /// </summary>
         public static string DepartmentEmail {
@@ -174,6 +210,15 @@ namespace PennyTechManagementSystem {
         public static string DepartmentShortName {
             get {
                 return ResourceManager.GetString("DepartmentShortName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Designation.
+        /// </summary>
+        public static string DesignationID {
+            get {
+                return ResourceManager.GetString("DesignationID", resourceCulture);
             }
         }
         
@@ -241,6 +286,15 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Education.
+        /// </summary>
+        public static string EducationID {
+            get {
+                return ResourceManager.GetString("EducationID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to End Date.
         /// </summary>
         public static string EndDate {
@@ -264,6 +318,15 @@ namespace PennyTechManagementSystem {
         public static string EngineNumber {
             get {
                 return ResourceManager.GetString("EngineNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EOBI Number.
+        /// </summary>
+        public static string EOBINumber {
+            get {
+                return ResourceManager.GetString("EOBINumber", resourceCulture);
             }
         }
         
@@ -322,6 +385,33 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Experiance.
+        /// </summary>
+        public static string Experiance {
+            get {
+                return ResourceManager.GetString("Experiance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Father ID Card Number.
+        /// </summary>
+        public static string FatherIdentityCardNumber {
+            get {
+                return ResourceManager.GetString("FatherIdentityCardNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Father Name.
+        /// </summary>
+        public static string FatherName {
+            get {
+                return ResourceManager.GetString("FatherName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fuel Amount.
         /// </summary>
         public static string FuelAmount {
@@ -345,6 +435,33 @@ namespace PennyTechManagementSystem {
         public static string FuelRate {
             get {
                 return ResourceManager.GetString("FuelRate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Name.
+        /// </summary>
+        public static string FullName {
+            get {
+                return ResourceManager.GetString("FullName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gender.
+        /// </summary>
+        public static string GenderID {
+            get {
+                return ResourceManager.GetString("GenderID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID Card Number.
+        /// </summary>
+        public static string IdentityCardNumber {
+            get {
+                return ResourceManager.GetString("IdentityCardNumber", resourceCulture);
             }
         }
         
@@ -376,11 +493,47 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Marital Status.
+        /// </summary>
+        public static string MaritalStatusID {
+            get {
+                return ResourceManager.GetString("MaritalStatusID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mobile.
+        /// </summary>
+        public static string Mobile {
+            get {
+                return ResourceManager.GetString("Mobile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Model Year.
         /// </summary>
         public static string ModelYear {
             get {
                 return ResourceManager.GetString("ModelYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nationality.
+        /// </summary>
+        public static string Nationality {
+            get {
+                return ResourceManager.GetString("Nationality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NTS Number.
+        /// </summary>
+        public static string NTSNumber {
+            get {
+                return ResourceManager.GetString("NTSNumber", resourceCulture);
             }
         }
         
@@ -421,6 +574,24 @@ namespace PennyTechManagementSystem {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        public static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        public static string Phone {
+            get {
+                return ResourceManager.GetString("Phone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Purchase Date.
         /// </summary>
         public static string PurchaseDate {
@@ -444,6 +615,15 @@ namespace PennyTechManagementSystem {
         public static string ReferenceDate {
             get {
                 return ResourceManager.GetString("ReferenceDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Religion.
+        /// </summary>
+        public static string ReligionID {
+            get {
+                return ResourceManager.GetString("ReligionID", resourceCulture);
             }
         }
         
@@ -543,6 +723,15 @@ namespace PennyTechManagementSystem {
         public static string SuccessSave {
             get {
                 return ResourceManager.GetString("SuccessSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        public static string Username {
+            get {
+                return ResourceManager.GetString("Username", resourceCulture);
             }
         }
         

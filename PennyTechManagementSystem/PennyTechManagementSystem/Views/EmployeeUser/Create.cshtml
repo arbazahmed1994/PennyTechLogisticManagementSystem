@@ -1,0 +1,250 @@
+﻿@model PennyTechManagementSystem.Models.EmployeeUser
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong>@ViewBag.Form</strong>
+                    <small>Form</small>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.FullName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.FullName)
+                                    @Html.ValidationMessageFor(model => model.FullName)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.FatherName)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.FatherName)
+                                    @Html.ValidationMessageFor(model => model.FatherName)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.IdentityCardNumber)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.IdentityCardNumber)
+                                    @Html.ValidationMessageFor(model => model.IdentityCardNumber)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.FatherIdentityCardNumber)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.FatherIdentityCardNumber)
+                                    @Html.ValidationMessageFor(model => model.FatherIdentityCardNumber)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DateOfBirth)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.DateOfBirth)
+                                    @Html.ValidationMessageFor(model => model.DateOfBirth)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Phone)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Phone)
+                                    @Html.ValidationMessageFor(model => model.Phone)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Mobile)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Mobile)
+                                    @Html.ValidationMessageFor(model => model.Mobile)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Address)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Address)
+                                    @Html.ValidationMessageFor(model => model.Address)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Experiance)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Experiance)
+                                    @Html.ValidationMessageFor(model => model.Experiance)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Salary)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Salary)
+                                    @Html.ValidationMessageFor(model => model.Salary)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.EOBINumber)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.EOBINumber)
+                                    @Html.ValidationMessageFor(model => model.EOBINumber)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.NTSNumber)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.NTSNumber)
+                                    @Html.ValidationMessageFor(model => model.NTSNumber)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Username)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Username)
+                                    @Html.ValidationMessageFor(model => model.Username)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Password)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.Password)
+                                    @Html.ValidationMessageFor(model => model.Password)
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.MaritalStatusID)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.MaritalStatusID, Model.MaritalStatusList)
+                                    @Html.ValidationMessageFor(model => model.MaritalStatusID)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.CityID)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.CityID, Model.CityList)
+                                    @Html.ValidationMessageFor(model => model.CityID)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.Nationality)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.Nationality, Model.CountriesList)
+                                    @Html.ValidationMessageFor(model => model.Nationality)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.ReligionID)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.ReligionID, Model.ReligionList)
+                                    @Html.ValidationMessageFor(model => model.ReligionID)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.EducationID)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.EducationID, Model.EducationList)
+                                    @Html.ValidationMessageFor(model => model.EducationID)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DepartmentCode)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.DepartmentCode, Model.DepartmentList)
+                                    @Html.ValidationMessageFor(model => model.DepartmentCode)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.DesignationID)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.DesignationID, Model.DesignationList)
+                                    @Html.ValidationMessageFor(model => model.DesignationID)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.GenderID)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.DropDownListFor(model => model.GenderID, Model.GenderList)
+                                    @Html.ValidationMessageFor(model => model.GenderID)
+                                </div>
+                            </div>
+                            
+                            <p>
+                                <input type="submit" class="btn btn-sm btn-primary" value="Create" />
+                            </p>
+                        </div>
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                           
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

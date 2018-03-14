@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PennyTechManagementSystem.Models.EmployeeUser>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_NestedLayout.cshtml";
+}
+
+<table class="custom-table table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdentityCardNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DesignationName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentName)
+            </th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                @Html.HiddenFor(model => item.UserCode)
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdentityCardNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mobile)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DesignationName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmentName)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "EmployeeUser", new { id = item.UserCode })"><i class="fa fa-pencil"></i></a>
+                </td>
+                <td> 
+                    <a href="@Url.Action("Delete","EmployeeUser", new { id = item.UserCode })" onclick="return confirm('Do you really want to delete this item?')"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

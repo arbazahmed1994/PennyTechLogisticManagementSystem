@@ -162,5 +162,103 @@ namespace PennyTechManagementSystem.Models
                               Value = expenceName.ExpenceNameID.ToString()
                           });
         }
+
+        public static IEnumerable<SelectListItem> ToMaritalStatusSelectListItems(
+            this IEnumerable<BasicModel> MaritalStatusID, int selectedId)
+        {
+            return
+                MaritalStatusID.OrderBy(maritalStatusID => maritalStatusID.MaritalStatusName)
+                      .Select(maritalStatusID =>
+                          new SelectListItem
+                          {
+                              Selected = (maritalStatusID.MaritalStatusID == selectedId),
+                              Text = maritalStatusID.MaritalStatusName,
+                              Value = maritalStatusID.MaritalStatusID.ToString()
+                          });
+        }
+
+        public static IEnumerable<SelectListItem> ToCitySelectListItems(
+            this IEnumerable<City> CityID, int selectedId)
+        {
+            return
+                CityID.OrderBy(cityID => cityID.CityName)
+                      .Select(cityID =>
+                          new SelectListItem
+                          {
+                              Selected = (cityID.CityID == selectedId),
+                              Text = cityID.CityName,
+                              Value = cityID.CityID.ToString()
+                          });
+        }
+
+        public static IEnumerable<SelectListItem> ToReligionSelectListItems(
+            this IEnumerable<BasicModel> ReligionID, int selectedId)
+        {
+            return
+                ReligionID.OrderBy(religionID => religionID.ReligionName)
+                      .Select(religionID =>
+                          new SelectListItem
+                          {
+                              Selected = (religionID.ReligionID == selectedId),
+                              Text = religionID.ReligionName,
+                              Value = religionID.ReligionID.ToString()
+                          });
+        }
+
+        public static IEnumerable<SelectListItem> ToEducationSelectListItems(
+            this IEnumerable<BasicModel> EducationID, int selectedId)
+        {
+            return
+                EducationID.OrderBy(educationID => educationID.EducationName)
+                      .Select(educationID =>
+                          new SelectListItem
+                          {
+                              Selected = (educationID.EducationID == selectedId),
+                              Text = educationID.EducationName,
+                              Value = educationID.EducationID.ToString()
+                          });
+        }
+
+        public static IEnumerable<SelectListItem> ToDepartmentSelectListItems(
+            this IEnumerable<Department> DepartmentID, int selectedId)
+        {
+            return
+                DepartmentID.OrderBy(departmentID => departmentID.DepartmentName)
+                      .Select(departmentID =>
+                          new SelectListItem
+                          {
+                              Selected = (departmentID.DepartmentID == selectedId),
+                              Text = departmentID.DepartmentName,
+                              Value = departmentID.DepartmentID.ToString()
+                          });
+        }
+
+        public static IEnumerable<SelectListItem> ToDesignationSelectListItems(
+            this IEnumerable<Designation> DesignationID, int selectedId)
+        {
+            return
+                DesignationID.OrderBy(designationID => designationID.DesignationName)
+                      .Select(designationID =>
+                          new SelectListItem
+                          {
+                              Selected = (designationID.DesignationID == selectedId),
+                              Text = designationID.DesignationName,
+                              Value = designationID.DesignationID.ToString()
+                          });
+        }
+
+        public static IEnumerable<SelectListItem> ToGenderSelectListItems(
+            this IEnumerable<BasicModel> GenderID, int selectedId)
+        {
+            return
+                GenderID.OrderBy(genderID => genderID.GenderName)
+                      .Select(genderID =>
+                          new SelectListItem
+                          {
+                              Selected = (genderID.GenderID == selectedId),
+                              Text = genderID.GenderName,
+                              Value = genderID.GenderID.ToString()
+                          });
+        }
     }
 }

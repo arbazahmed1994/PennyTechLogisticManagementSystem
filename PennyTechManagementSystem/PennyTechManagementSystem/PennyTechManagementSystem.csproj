@@ -123,6 +123,7 @@
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\DesignationsController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
+    <Compile Include="Controllers\EmployeeUserController.cs" />
     <Compile Include="Controllers\ExpenceCategoryController.cs" />
     <Compile Include="Controllers\ExpenceNameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -142,26 +143,18 @@
     <Compile Include="Models\BasicModel.cs" />
     <Compile Include="Models\BranchOffice.cs" />
     <Compile Include="Models\Cities.cs" />
-    <Compile Include="Models\Colors.cs" />
-    <Compile Include="Models\CompanyBusinessType.cs" />
     <Compile Include="Models\CompanyProfile.cs" />
-    <Compile Include="Models\Countries.cs" />
     <Compile Include="Models\Departments.cs" />
     <Compile Include="Models\Designations.cs" />
     <Compile Include="Models\Driver.cs" />
-    <Compile Include="Models\Education.cs" />
     <Compile Include="Models\EmployeeUser.cs" />
     <Compile Include="Models\ExpenceCategoryModel.cs" />
     <Compile Include="Models\ExpenceNameModel.cs" />
-    <Compile Include="Models\Gender.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
-    <Compile Include="Models\MaritalStatu.cs" />
     <Compile Include="Models\ModelExtentions.cs" />
     <Compile Include="Models\Navbar.cs" />
     <Compile Include="Models\NavbarModel.cs" />
-    <Compile Include="Models\Religion.cs" />
-    <Compile Include="Models\Status.cs" />
     <Compile Include="Models\ThirdPartyVehicle.cs" />
     <Compile Include="Models\TripBeginModel.cs" />
     <Compile Include="Models\TripEndModel.cs" />
@@ -177,9 +170,11 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BasicRepository.cs" />
+    <Compile Include="Repository\CitiesRepository.cs" />
     <Compile Include="Repository\DepartmentRepository.cs" />
     <Compile Include="Repository\DesignationsRepository.cs" />
     <Compile Include="Repository\DriverRepository.cs" />
+    <Compile Include="Repository\EmployeeUserRepository.cs" />
     <Compile Include="Repository\ExpenceCategoryRepository.cs" />
     <Compile Include="Repository\ExpenceNameRepository.cs" />
     <Compile Include="Repository\HomeRepository.cs" />
@@ -492,6 +487,9 @@
     <Content Include="Views\TripBegin\Detail.cshtml" />
     <Content Include="Views\Department\Index.cshtml" />
     <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\EmployeeUser\Index.cshtml" />
+    <Content Include="Views\EmployeeUser\Create.cshtml" />
+    <Content Include="Views\EmployeeUser\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
