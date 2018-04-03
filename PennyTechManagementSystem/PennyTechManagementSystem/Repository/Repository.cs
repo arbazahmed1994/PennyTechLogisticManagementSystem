@@ -17,6 +17,7 @@ namespace PennyTechManagementSystem.Repository
         public abstract string GetByIDSPName { get; }
         public abstract string GetByStringSPName { get; }
         public abstract string DeleteSPName { get; }
+        //public abstract string DeleteTwoSPName { get; }
         public abstract string DeleteByStringSPName { get; }
         public abstract string CreateSPName { get; }
         public abstract string EditSPName { get; }
@@ -75,6 +76,13 @@ namespace PennyTechManagementSystem.Repository
             int confirm = db.ExecuteNonQuery(DeleteSPName, id);
             return confirm;
         }
+
+
+        //public int DeleteTwo(int id, int user)
+        //{
+        //    int confirm = db.ExecuteNonQuery(DeleteTwoSPName, id, user);
+        //    return confirm;
+        //}
 
         public int Delete(string id)
         {

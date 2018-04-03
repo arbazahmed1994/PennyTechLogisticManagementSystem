@@ -17,6 +17,7 @@ namespace PennyTechManagementSystem.Models
             TripExpenceList = new List<TripExpenceViewModel>();
         }
 
+        public int EntryUser { get; set; }
 
         // REQUIRED --
 

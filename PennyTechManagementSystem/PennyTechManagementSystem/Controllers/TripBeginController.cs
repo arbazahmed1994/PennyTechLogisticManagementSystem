@@ -39,6 +39,7 @@ namespace PennyTechManagementSystem.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    model.EntryUser = Convert.ToInt32(Session["UserCode"].ToString());
                     try
                     {
                         _rep.Create(model);
@@ -80,6 +81,7 @@ namespace PennyTechManagementSystem.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    model.EntryUser = Convert.ToInt32(Session["UserCode"].ToString());
                     try
                     {
                         _rep.Edit(model);

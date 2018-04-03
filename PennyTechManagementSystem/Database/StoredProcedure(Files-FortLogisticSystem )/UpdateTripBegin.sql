@@ -18,7 +18,8 @@ CREATE PROCEDURE UpdateTripBegin
 @LoadedWeight DECIMAL(8,2),
 @ShipmentName VARCHAR(100),
 @StartingMeterReading DECIMAL(18,2),
-@EstimatedTime FLOAT
+@EstimatedTime FLOAT,
+@EntryUser INT
 
 AS
 
@@ -39,7 +40,8 @@ BEGIN
 		ShipmentName = @ShipmentName,
 		StartingMeterReading = @StartingMeterReading,
 		EstimatedTime = @EstimatedTime,
-		UpdateDate = GETDATE()
+		UpdateDate = GETDATE(),
+		UpdateUser = @EntryUser
 	WHERE
 		ReferenceID = @ReferenceID
 

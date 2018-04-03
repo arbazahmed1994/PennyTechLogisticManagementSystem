@@ -17,7 +17,8 @@ CREATE PROCEDURE CreateTripBegin
 @LoadedWeight DECIMAL(8,2),
 @ShipmentName VARCHAR(100),
 @StartingMeterReading DECIMAL(18,2),
-@EstimatedTime FLOAT
+@EstimatedTime FLOAT,
+@EntryUser INT
 
 AS
 
@@ -40,7 +41,8 @@ BEGIN
 		EstimatedTime,
 		IsEnded,
 		EntryDate,
-		IsDeleted )
+		IsDeleted,
+		EntryUser )
 	VALUES (
 		@ReferenceDate ,
 		@OrderCompanyName ,
@@ -58,7 +60,8 @@ BEGIN
 		@EstimatedTime ,
 		0 ,
 		GETDATE() ,
-		0 )
+		0,
+		@EntryUser )
 
 END
 

@@ -54,6 +54,8 @@ namespace PennyTechManagementSystem.Models
 
         public string DriverName { get; set; }
 
+        public int EntryUser { get; set; }
+
         // REQUIRED --
 
         [DataType(DataType.Date)]

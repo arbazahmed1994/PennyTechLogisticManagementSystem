@@ -9,7 +9,8 @@ CREATE PROCEDURE CreateTripEnd
 @FuelRate DECIMAL(10,2),
 @FuelAmount DECIMAL(18,2),
 @EndDate DATE,
-@TripExpenceListXML XML
+@TripExpenceListXML XML,
+@EntryUser INT
 
 AS
 
@@ -34,7 +35,8 @@ BEGIN
 		FuelAmount ,
 		EndDate , 
 		EntryDate , 
-		IsDeleted )
+		IsDeleted,
+		EntryUser )
 	VALUES (
 		@TripReferenceID ,
 		@FuelLitre ,
@@ -42,7 +44,8 @@ BEGIN
 		@FuelAmount ,
 		@EndDate ,
 		GETDATE() ,
-		0 )
+		0,
+		@EntryUser )
 
 	DECLARE @MainTripID AS INT = (SELECT MainTripID FROM TripEnd WHERE TripReferenceID = @TripReferenceID)
 
